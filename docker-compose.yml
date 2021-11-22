@@ -1,32 +1,37 @@
 version: "3.9"
 services:
   php:
+    container_name: mvc-php
     build: './docker-php/'
-    networks:
-      - backend
     volumes:
       - ./public_html/:/var/www/html/
+    networks:
+      - backend
   apache:
+    container_name: mvc-apache
     build: './docker-apache/'
     depends_on:
       - php
       - mysql
+    volumes:
+      - ./public_html/:/var/www/html/
+    ports:
+      - "8080:80"
     networks:
       - frontend
       - backend
-    ports:
-      - "8080:80"
-    volumes:
-      - ./public_html/:/var/www/html/
   mysql:
+    container_name: mvc-sql
     image: mysql:5.6.40
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_DATABASE: ${MY_DATABASE}
+        MYSQL_USER: ${MYSQL_USER}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}
     networks:
       - backend
-    environment:
-        MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
-        MYSQL_DATABASE: MY_DATABASE
-        MYSQL_USER: MYSQL_USER
-        MYSQL_PASSWORD: MYSQL_PASSWORD
 networks:
   frontend:
   backend:
