@@ -1,15 +1,15 @@
 function main() {
 
     document.getElementById("sensors").onclick = function() {
-        location.href = window.location.origin + `/index.html`;
+        location.href = window.location.origin + `index.html`;
     };
 
     document.getElementById("account").onclick = function() {
-        location.href = window.location.origin + `/account.html`;
+        location.href = window.location.origin + `account.html`;
     };
 
     document.getElementById("settings").onclick = function() {
-        location.href = window.location.origin + `/parameter.html`;
+        location.href = window.location.origin + `parameter.html`;
     };
 
     document.getElementById("logout").onclick = logout;
@@ -51,7 +51,7 @@ async function settings(node) {
 
     let darkmodeBool = JSON.parse(settings.darkmode);
     if (darkmodeBool == true) {
-        style.href = "/style/darkmode.css";
+        style.href = "../style/darkmode.css";
     }
 }
 

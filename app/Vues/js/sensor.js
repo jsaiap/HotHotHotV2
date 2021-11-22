@@ -23,7 +23,7 @@ async function display() {
     }
 
     for (val in data) {
-        let url = window.location.origin + `/sensor-resume.html?id=${data[val].id}`;
+        let url = window.location.origin + `../html/sensor-resume.html?id=${data[val].id}`;
         document.getElementById(`sensor-${data[val].id}`).addEventListener("click", function() { location.href = url; })
 
     }
@@ -35,7 +35,7 @@ function displayAlertByTemp(temperature, location, type, alertMessage, id) {
     let hours = new Date().getHours();
     let minutes = new Date().getMinutes();
     let time = hours + ":" + minutes;
-    let url = window.location.origin + `/sensor-resume.html?id=${id}`;
+    let url = window.location.origin + `../html/sensor-resume.html?id=${id}`;
 
     if (type == "exterieur") {
         if (temperature > 35) {
@@ -69,7 +69,7 @@ function alertTemplate(name, message, description, time, url) {
                         <p>${description}</p>
                         <p class="time">${time}</p>`;
 
-    let close = document.createElement("img");
+    let close = document.createElement("../img");
     close.classList.add("close-alert");
     close.src = "https://img.icons8.com/material-rounded/50/000000/delete-sign.png";
     alert.append(close);
