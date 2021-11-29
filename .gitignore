@@ -1,2 +1,4 @@
 .DS_STORE
 data
+.idea
+nodes_modules
