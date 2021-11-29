@@ -19,4 +19,3 @@
     }
 
     // Les différentes sous-vues ont été "crachées" dans le tampon d'affichage, on les récupère
-    ob_get_flush();

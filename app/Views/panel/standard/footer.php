@@ -1,3 +1,3 @@
 <footer>
-    <p>Vincent Asta copyright © 2021-2022</p>
+    <p>CroustyBoys copyright © 2021-2022</p>
 </footer>
