@@ -2,3 +2,5 @@
 data
 .idea
 nodes_modules
+package-lock.json
+package.json
