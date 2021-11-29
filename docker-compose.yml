@@ -4,7 +4,8 @@ services:
     container_name: mvc-php
     build: './docker-php/'
     volumes:
-      - ./public_html/:/var/www/html/
+      - ./app/:/var/www/html/
+    restart: always
     networks:
       - backend
   apache:
@@ -14,7 +15,7 @@ services:
       - php
       - mysql
     volumes:
-      - ./public_html/:/var/www/html/
+      - ./app/:/var/www/html/
     ports:
       - "8080:80"
     networks:
@@ -22,7 +23,10 @@ services:
       - backend
   mysql:
     container_name: mvc-sql
-    image: mysql:5.6.40
+    image: mysql:5.7
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    restart: always
     environment:
         MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
         MYSQL_DATABASE: ${MY_DATABASE}
