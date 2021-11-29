@@ -24,7 +24,7 @@
     </section>
     <section class="v-box slogan">
         <h1 class="slogan-text">Gère tes capteurs,</h1>
-        <p class="slogan-text"> ta capté</p>
+        <p class="slogan-text">t'as capté</p>
         <button id="connect" onclick="openForm()">Connexion</button>
     </section>
 </main>
