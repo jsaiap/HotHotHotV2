@@ -38,6 +38,14 @@ final class AutoLoad
 
         return static::_load($file);
     }
+
+    public static function loadClassesModules ($className)
+    {
+        $file = Constants::modulesDirectory() . "$className.php";
+
+        return static::_load($file);
+    }
+
     private static function _load ($S_fichierACharger)
     {
         if (is_readable($S_fichierACharger))
@@ -53,3 +61,4 @@ spl_autoload_register('AutoLoad::loadClassesException');
 spl_autoload_register('AutoLoad::loadClassesModele');
 spl_autoload_register('AutoLoad::loadClassesView');
 spl_autoload_register('AutoLoad::loadClassesController');
+spl_autoload_register('AutoLoad::loadClassesModules');
