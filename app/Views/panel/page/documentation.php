@@ -27,7 +27,8 @@
 
 <main id="capteur-section">
     <section class="main-section">
-        <h2>Documentation</h2>
+        <h2>Documentation MVC</h2>
+        <a href="documentation/user">Accéder à la documentation utilisateur</a>
     </section>
     <!-- // TO DO Modifier la documentation icône en haut à droite -->
     <a href="#">Modifier la documentation</a>
