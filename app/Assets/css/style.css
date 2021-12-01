@@ -399,7 +399,7 @@ footer p {
     padding: 1px 5px 1px 5px;
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 1200px) {
     .graph-box {
         grid-column: 2;
         grid-row: 2 / span 3;
