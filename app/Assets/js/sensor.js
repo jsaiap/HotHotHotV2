@@ -35,7 +35,7 @@ function displayAlertByTemp(temperature, location, type, alertMessage, id) {
     let hours = new Date().getHours();
     let minutes = new Date().getMinutes();
     let time = hours + ":" + minutes;
-    let url = window.location.origin + `/resume?id=${id}`;
+    let url = window.location.origin + `/panel/resume?id=${id}`;
 
     if (type == "exterieur") {
         if (temperature > 35) {
