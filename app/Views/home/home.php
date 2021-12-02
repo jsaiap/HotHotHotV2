@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="845297051358-pvjbk8iiksbnubsealcib1avhof0i5oa.apps.googleusercontent.com">
     <title>HotHotHot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +33,13 @@
 <section id="form-box" class="h-box">
     <form id="login" action="post">
         <h2 class="title-form">Connexion</h2>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" type="text">
         <label class="black-label" for="password">Mot de passe</label>
         <input id="password" type="password">
         <button class="btn-connect">Se connecter</button>
     </form>
-
 
     <form id="register">
         <h2 class="title-form">Inscription</h2>
@@ -54,6 +55,9 @@
 </section>
 
 <script src="/Assets/js/script.js"></script>
+<script src="/Assets/js/google-button.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 
 </html>
