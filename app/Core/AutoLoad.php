@@ -17,7 +17,7 @@ final class AutoLoad
         return static::_load($file);
     }
 
-    public static function loadClassesModele ($className)
+    public static function loadClassesModel ($className)
     {
         $file = Constants::modelsDirectory() . "$className.php";
 
@@ -39,9 +39,55 @@ final class AutoLoad
         return static::_load($file);
     }
 
-    public static function loadClassesModules ($className)
+    public static function loadModulesClassesModel ($className)
     {
-        $file = Constants::modulesDirectory() . "$className.php";
+        $file = "";
+
+        $dotDir = array('.', '..');
+
+        foreach(array_diff(scandir(Constants::modulesDirectory(), 1), $dotDir) as $module){
+            foreach(array_diff(scandir(Constants::modulesModelsDirectory("$module"), 1), $dotDir) as $modelName){
+                if ("$modelName" == "$className.php"){
+                    $file = Constants::modulesModelsDirectory("$module") . "$className.php";
+                }
+            }
+        }
+
+        return static::_load($file);
+
+    }
+
+    // Peut etre a voir plus tard
+    // public static function loadModulesClassesView ($className)
+    // {
+    //     $file = "";
+
+    //     $dotDir = array('.', '..');
+
+    //     foreach(array_diff(scandir(Constants::modulesDirectory(), 1), $dotDir) as $module){
+    //         foreach(array_diff(scandir(Constants::modulesViewsDirectory("$module"), 1), $dotDir) as $viewName){
+    //             if ("$viewName" == "$className.php"){
+    //                 $file = Constants::modulesViewsDirectory("$module") . "$className.php";
+    //             }
+    //         }
+    //     }
+
+    //     return static::_load($file);
+    // }
+
+    public static function loadModulesClassesController ($className)
+    {
+        $file = "";
+
+        $dotDir = array('.', '..');
+
+        foreach(array_diff(scandir(Constants::modulesDirectory(), 1), $dotDir) as $module){
+            foreach(array_diff(scandir(Constants::modulesControllersDirectory("$module"), 1), $dotDir) as $controllerName){
+                if ("$controllerName" == "$className.php"){
+                    $file = Constants::modulesControllersDirectory("$module") . "$className.php";
+                }
+            }
+        }
 
         return static::_load($file);
     }
@@ -58,7 +104,11 @@ final class AutoLoad
 // J'empile tout ce beau monde comme j'ai toujours appris à le faire...
 spl_autoload_register('AutoLoad::loadClassesCore');
 spl_autoload_register('AutoLoad::loadClassesException');
-spl_autoload_register('AutoLoad::loadClassesModele');
+spl_autoload_register('AutoLoad::loadClassesModel');
 spl_autoload_register('AutoLoad::loadClassesView');
 spl_autoload_register('AutoLoad::loadClassesController');
-spl_autoload_register('AutoLoad::loadClassesModules');
+spl_autoload_register('AutoLoad::loadModulesClassesModel');
+// spl_autoload_register('AutoLoad::loadModulesClassesView');
+spl_autoload_register('AutoLoad::loadModulesClassesController');
+
+
