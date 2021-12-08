@@ -1,3 +1,6 @@
+<?php
+if(!isset($_SESSION) || !isset($_SESSION['username'])  || empty($_SESSION['username'])) header("Location: /home"); ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
