@@ -26,10 +26,12 @@
 </header>
 
 <main id="capteur-section">
+    <a href="/documentation/"><--</a><br>
 	<section class="main-section">
 		<h2>Documentation Utilisateur</h2>
 	</section>
 	<!-- // TO DO Modifier la documentation icône en haut à droite -->
+    <br>
 	<a href="#">Modifier la documentation</a>
 	<article>
 		<h2>Documentation de l'utilisation de l'application HotHotHot</h2>
@@ -39,3 +41,7 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est et hic inventore iste labore magnam molestiae nihil numquam perferendis quam quibusdam quisquam repudiandae sint totam ullam vel voluptate voluptatibus?</p>
 	</article>
 </main>
+
+
+<script src="/Assets/js/script.js"></script>
+<script src="/Assets/js/sensor.js"></script>

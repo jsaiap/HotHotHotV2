@@ -26,11 +26,13 @@
 </header>
 
 <main id="capteur-section">
+        <a href="/"><--</a><br>
     <section class="main-section">
         <h2>Documentation MVC</h2>
-        <a href="documentation/user">Accéder à la documentation utilisateur</a>
+        <a href="user/">Accéder à la documentation utilisateur</a>
     </section>
     <!-- // TO DO Modifier la documentation icône en haut à droite -->
+    <br>
     <a href="#">Modifier la documentation</a>
     <article>
         <h2>Documentation du MVC HotHotHot</h2>
@@ -40,3 +42,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est et hic inventore iste labore magnam molestiae nihil numquam perferendis quam quibusdam quisquam repudiandae sint totam ullam vel voluptate voluptatibus?</p>
     </article>
 </main>
+
+
+<script src="/Assets/js/script.js"></script>
+<script src="/Assets/js/sensor.js"></script>
