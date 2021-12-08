@@ -11,7 +11,7 @@ final class User extends ObjectModel{
 	private $admin;
 
     public function showMembers() {
-        $req = prepare('SELECT * FROM users');
+        $req = prepare('SELECT `name`, `email`, creation_date, `admin` FROM users');
         return execute($req);
     }
 
@@ -22,6 +22,16 @@ final class User extends ObjectModel{
 
     public function changePassword($user_id, $password) {
         $req = prepare('UPDATE users SET password = '.$password.' WHERE id = '.$user_id);
+        $req = execute($req);
+    }
+
+    public function changeName($user_id, $name) {
+        $req = prepare('UPDATE users SET `name` = '.$name.' WHERE id = '.$user_id);
+        $req = execute($req);
+    }
+
+    public function changeEmail($user_id, $email) {
+        $req = prepare('UPDATE users SET `email` = '.$email.' WHERE id = '.$user_id);
         $req = execute($req);
     }
 }
