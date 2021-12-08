@@ -3,7 +3,7 @@
 class ObjectModel {
 
     public function connectdb() {
-        return new PDO("mysql:host=".${MYSQL_PORT}.";dbname=".${MY_DATABASE}.";", ${MYSQL_USER}, ${MYSQL_PASSWORD});
+        return new PDO("mysql:host=3306:3306;dbname=hotdb;", "hotuser","hotpassword");
     }
     
 }
