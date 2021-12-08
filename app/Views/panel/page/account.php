@@ -28,6 +28,9 @@
 <main id="capteur-section">
     <section class="main-section">
         <h2>Mon compte</h2>
+        <?php
+            echo "<p>". $_SESSION['username'] . "</p>";
+        ?>
     </section>
 </main>
 

@@ -18,7 +18,10 @@ function main() {
 
 }
 
-function logout() {
+async function logout() {
+    const response = await fetch('/logout', {
+        method: 'post'
+    });
     location.href = window.location.origin + `/home`;
 }
 
@@ -54,6 +57,7 @@ async function settings(node) {
         style.href = "/style/darkmode.css";
     }
 }
+
 
 main();
 

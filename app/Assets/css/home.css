@@ -78,6 +78,7 @@ body {
 .slogan p {
     align-self: baseline;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 #connect {

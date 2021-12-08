@@ -23,6 +23,7 @@ final class View
 
         $view = $parameters;
         // Démarrage d'un sous-tampon
+        session_start();
         ob_start();
         include $fichier; // c'est dans ce fichier que sera utilisé A_vue, la vue est inclue dans le sous-tampon
         ob_end_flush();

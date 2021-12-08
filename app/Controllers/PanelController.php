@@ -8,7 +8,7 @@ final class PanelController
      *
      * @return void
      */
-    public function defautAction()
+    public static function defautAction()
     {
         View::show('panel/page/sensor');
     }

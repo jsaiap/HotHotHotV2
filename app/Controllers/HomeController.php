@@ -8,7 +8,7 @@ final class HomeController
      *
      * @return void
      */
-    public function defautAction()
+    public static function defautAction()
     {
         View::show('home/home');
     }

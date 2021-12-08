@@ -24,18 +24,18 @@
     </section>
     <section class="v-box slogan">
         <h1 class="slogan-text">Gère tes capteurs,</h1>
-        <p class="slogan-text">tu as capté</p>
+        <p class="slogan-text">t'as capté</p>
         <button id="connect" onclick="openForm()">Connexion</button>
     </section>
 </main>
 
 <section id="form-box" class="h-box">
-    <form id="login" action="post">
+    <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
         <label class="black-label" for="username">Identifiant</label>
-        <input id="username" type="text">
+        <input id="username" name="username" type="text">
         <label class="black-label" for="password">Mot de passe</label>
-        <input id="password" type="password">
+        <input id="password" name="password" type="password">
         <button class="btn-connect">Se connecter</button>
     </form>
 
