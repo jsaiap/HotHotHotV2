@@ -1,5 +1,6 @@
 .DS_STORE
-data
+data/
+data/*
 .idea
 nodes_modules
 package-lock.json
