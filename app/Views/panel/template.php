@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION) || !isset($_SESSION['username'])  || empty($_SESSION['username'])) header("Location: /home"); ?>
+if(!isset($_SESSION) || !isset($_SESSION['user'])  || empty($_SESSION['user'])) header("Location: /home"); ?>
 
 <!doctype html>
 <html lang="fr">

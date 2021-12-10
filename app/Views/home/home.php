@@ -41,14 +41,14 @@
         <button class="btn-connect">Se connecter</button>
     </form>
 
-    <form id="register">
+    <form id="register" method="POST" action="register">
         <h2 class="title-form">Inscription</h2>
         <label for="username-i">Identifiant</label>
-        <input id="username-i" type="text">
-        <label for="mail-i">E-mail</label>
-        <input id="mail-i" placeholder="exemple@hothothot.fr" type="email">
+        <input id="username-i" name="username" type="text">
+        <label for="mail-i"  >E-mail</label>
+        <input id="mail-i" name="email" placeholder="exemple@hothothot.fr" type="email">
         <label for="password-i">Mot de passe</label>
-        <input id="password-i" type="password">
+        <input id="password-i" name="password" type="password">
         <input id="conf-password-i" placeholder="Confimer votre mot de passe" type="password">
         <button class="btn-connect">S'inscrire</button>
     </form>

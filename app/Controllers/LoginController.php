@@ -10,20 +10,18 @@ final class LoginController
      */
     public function defautAction()
     {
-        if(isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['username'])){
-            if ($_POST['username'] == "test" && $_POST['password'] == "test"){
-                session_start();
-                $_SESSION['username'] = "test";
-                header('Location: /panel');
+        if(count(array_filter($_POST))==count($_POST)){
+            session_start();
+            $_SESSION['user'] = new User();
+            if($_SESSION['user']->isObjectExistBy("username", $_POST['username'])){
             }
             else{
-                header('Location: /home');
+             
             }
-         
-        }
-        else{
-            header('Location: /home');
-        }
+    }
+    else{
+        header('Location: /home');
+    }
     }
     
 }

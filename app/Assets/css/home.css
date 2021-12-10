@@ -12,6 +12,11 @@ body {
     margin: 0;
 }
 
+div.abcRioButton {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
 #home {
     display: flex;
     justify-content: center;
@@ -155,7 +160,7 @@ input {
     padding: 5px;
     margin: 5px;
     font-family: "Monteserrat", sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     border-radius: 3px;
 }
 

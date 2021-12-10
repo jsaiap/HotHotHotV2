@@ -2,26 +2,38 @@
 
 final class User extends ObjectModel{
 
-    private $user_id;
-    private $name;
-    private $email;
-    private $password;
-    private $creation_date;
-    private $connection_date;
-	private $admin;
-
-    public function showMembers() {
-        $req = prepare('SELECT * FROM users');
-        return execute($req);
+    public $username;
+    public $password;
+    public $email;
+    public $admin;
+    
+    function define(){
+        $this->table = "users";
+        $this->fields = [[
+                "name" => "id",
+                "type" => "INT(11)",
+                "more" => "AUTO_INCREMENT PRIMARY KEY",
+            ]  , [
+                "name" => "username",
+                "type" => "VARCHAR( 50 )",
+                "more" => "NOT NULL",
+            ] , [
+                "name" => "password",
+                "type" => "VARCHAR( 50 )",
+                "more" => "NOT NULL",
+            ] , [
+                "name" => "email",
+                "type" => "VARCHAR( 50 )",
+                "more" => "NOT NULL"
+            ] ,[
+                "name"=> "admin",
+                "type"=> "BIT(1)",
+                "more"=> "DEFAULT 0"
+            ]
+        ];
     }
 
-    public function createMember($user_id, $name, $email, $password, $creation_date, $connection_date, $admin = 0) {
-        $req = prepare('INSERT INTO users ($user_id, $name, $email, $password, $creation_date, $connection_date) VALUES(?,?,?,?,?,NOW())');
-        return execute($req);
-    }
 
-    public function changePassword($user_id, $password) {
-        $req = prepare('UPDATE users SET password = '.$password.' WHERE id = '.$user_id);
-        $req = execute($req);
-    }
+    
+
 }

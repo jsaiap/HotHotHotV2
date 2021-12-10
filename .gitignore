@@ -1,6 +1,6 @@
 .DS_STORE
 data/
-data/*
+data/mysql
 .idea
 nodes_modules
 package-lock.json
