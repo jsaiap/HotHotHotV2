@@ -17,12 +17,15 @@ final class RegisterController
                     session_destroy();
                     header('Location: /home');
                 }
-                else{
+                elseif($_POST['password'] == $_POST['password-confirm']){
                     $_SESSION['user']->username = $_POST['username'] ;
                     $_SESSION['user']->password = hash("md5",$_POST['password']);
                     $_SESSION['user']->email = $_POST['email'];
                     $_SESSION['user']->save();
                     header('Location: /panel');
+                }
+                else{
+                    header('Location: /home');
                 }
         }
         else{

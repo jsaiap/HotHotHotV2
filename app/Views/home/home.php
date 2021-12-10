@@ -49,7 +49,7 @@
         <input id="mail-i" name="email" placeholder="exemple@hothothot.fr" type="email">
         <label for="password-i">Mot de passe</label>
         <input id="password-i" name="password" type="password">
-        <input id="conf-password-i" placeholder="Confimer votre mot de passe" type="password">
+        <input id="conf-password-i" name="password-confirm" placeholder="Confimer votre mot de passe" type="password">
         <button class="btn-connect">S'inscrire</button>
     </form>
 </section>
