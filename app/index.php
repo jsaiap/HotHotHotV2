@@ -10,8 +10,6 @@
 
     try
     {
-        $user = new User();
-        $user->getObjectBy("username","ok");
         $O_controleur = new Controller($url, $postParams);
         $O_controleur->run();
     }

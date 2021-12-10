@@ -8,7 +8,14 @@ abstract class ObjectModel {
 
     function __construct($id = null) {
         $this->define();
+        if($id != null){
+            $obj = $this->getObjectById($id);
+            foreach($this->fields as $field){
+                $this->{$field['name']} = $obj[$field['name']];
+            }
+        }
         $this->createTable();
+
     }
 
     abstract protected function define();
@@ -75,11 +82,19 @@ abstract class ObjectModel {
     public function getObjectBy(string $var, string $val){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
-        $object = $db->query($sql)->fetch();
-        if($object == false){
-            return false;
-        }
+        var_dump($sql);
+        $object = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        var_dump($object);
+        return $object;
 
+    }
+
+    public function getObjectById(int $id){
+        $db = DataBase::connectdb();
+        $sql ="SELECT * from $this->table where id = $id ";
+        var_dump($sql);
+        $object = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        return $object;
     }
 
     public function isObjectExistBy(string $var, string $val){
@@ -90,6 +105,5 @@ abstract class ObjectModel {
             return false;
         }
         return true;
-        
     }
 }
