@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 abstract class ObjectModel {
 
     protected $id ;
@@ -72,7 +73,7 @@ abstract class ObjectModel {
 
         
 
-    public function getObjectBy(string $var, string $val){
+    public function getObjectBy(string $var, string $val): bool {
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
         $object = $db->query($sql)->fetch();
@@ -82,7 +83,7 @@ abstract class ObjectModel {
 
     }
 
-    public function isObjectExistBy(string $var, string $val){
+    public function isObjectExistBy(string $var, string $val): bool {
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
         $object = $db->query($sql)->fetch();
