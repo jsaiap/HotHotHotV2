@@ -27,7 +27,7 @@ final class User extends ObjectModel{
                 "more" => "NOT NULL"
             ] ,[
                 "name"=> "admin",
-                "type"=> "BIT(1)",
+                "type"=> "BOOLEAN",
                 "more"=> "DEFAULT 0"
             ]
         ];
