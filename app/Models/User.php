@@ -3,6 +3,7 @@
 final class User extends ObjectModel{
 
     public $username;
+    public $name;
     public $password;
     public $email;
     public $admin;
@@ -18,6 +19,10 @@ final class User extends ObjectModel{
                 "type" => "VARCHAR( 50 )",
                 "more" => "NOT NULL",
             ] , [
+                "name" => "name",
+                "type" => "VARCHAR( 50 )",
+                "more" => "NOT NULL",
+            ] ,[
                 "name" => "password",
                 "type" => "VARCHAR( 50 )",
                 "more" => "NOT NULL",

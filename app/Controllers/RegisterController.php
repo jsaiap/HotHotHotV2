@@ -16,21 +16,20 @@ final class RegisterController
                 if($_SESSION['user']->isObjectExistBy("username", $_POST['username']) || $_SESSION['user']->isObjectExistBy("email", $_POST['email'])){
                     session_destroy();
                     header('Location: /home');
+                    return ;
                 }
                 elseif($_POST['password'] == $_POST['password-confirm']){
+
                     $_SESSION['user']->username = $_POST['username'] ;
                     $_SESSION['user']->password = hash("md5",$_POST['password']);
                     $_SESSION['user']->email = $_POST['email'];
                     $_SESSION['user']->save();
                     header('Location: /panel');
-                }
-                else{
-                    header('Location: /home');
+                    return ;
                 }
         }
-        else{
-            header('Location: /home');
-        }
+        header('Location: /home');
+        return ;
     }
     
 }

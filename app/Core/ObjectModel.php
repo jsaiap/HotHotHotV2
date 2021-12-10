@@ -52,6 +52,11 @@ abstract class ObjectModel {
             $sql =" UPDATE $this->table   
                     SET ". $var ."  WHERE id  = " . $this->id;
             $db->exec($sql);
+
+        }
+        $obj = $this->getObjectById($this->id);
+        foreach($this->fields as $field){
+            $this->{$field['name']} = $obj[$field['name']];
         }
 
     }
