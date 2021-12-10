@@ -32,7 +32,7 @@
 	</section>
 	<!-- // TO DO Modifier la documentation icône en haut à droite -->
     <br>
-	<a href="#"> ✏️ Modifier la documentation</a>
+	<!-- <a href="#"> ✏️ Modifier la documentation</a> -->
 	<article>
 		<h2>Documentation de l'utilisation de l'application HotHotHot</h2>
 		<h3>Introduction</h3>
