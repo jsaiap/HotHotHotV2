@@ -33,7 +33,7 @@
 <section id="form-box" class="h-box">
     <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="my-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" name="username" type="text">
         <label class="black-label" for="password">Mot de passe</label>
@@ -45,6 +45,8 @@
         <h2 class="title-form">Inscription</h2>
         <label for="username-i">Identifiant</label>
         <input id="username-i" name="username" type="text">
+        <label for="name-i">Nom</label>
+        <input id="name-i" name="name" type="text">
         <label for="mail-i"  >E-mail</label>
         <input id="mail-i" name="email" placeholder="exemple@hothothot.fr" type="email">
         <label for="password-i">Mot de passe</label>

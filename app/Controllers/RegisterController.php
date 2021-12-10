@@ -19,6 +19,7 @@ final class RegisterController
                     return ;
                 }
                 elseif($_POST['password'] == $_POST['password-confirm']){
+
                     $_SESSION['user']->username = $_POST['username'] ;
                     $_SESSION['user']->password = hash("md5",$_POST['password']);
                     $_SESSION['user']->email = $_POST['email'];
