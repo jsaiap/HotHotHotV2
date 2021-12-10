@@ -17,20 +17,12 @@ final class LoginController
                 $testUser = $_SESSION['user']->getObjectBy("username", $_POST['username']);
                 if($_POST['username'] == $testUser["username"] && hash("md5",$_POST['password']) == $testUser['password']){
                     $_SESSION['user'] = new User($testUser['id']);
-                    header('Location: /panel');
-                }else{
-                    session_destroy();
-                    header('Location: /home');
+                    header('Location: /panel'); 
+                    return;
                 }
             }
-            else{
-                session_destroy();
-                header('Location: /home');
-            }
-    }
-    else{
+        }
         header('Location: /home');
+        return;
     }
-    }
-    
 }
