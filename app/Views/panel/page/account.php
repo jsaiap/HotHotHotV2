@@ -31,8 +31,10 @@
         <section>
             <h3>Informations</h3>
             <?php 
-            echo "<p>". $_SESSION['user']->username . "</p>";
-            echo "<p>". $_SESSION['user']->email . "</p>";  
+
+            foreach($_SESSION['user']->fields as $field){
+                echo "<p>". $_SESSION['user']->{$field['name']} . "</p>";
+            } 
             ?>
         </section>
     </section>

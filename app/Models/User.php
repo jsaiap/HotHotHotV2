@@ -7,6 +7,7 @@ final class User extends ObjectModel{
     public $password;
     public $email;
     public $admin;
+    public $google;
     
     function define(){
         $this->table = "users";
@@ -17,21 +18,25 @@ final class User extends ObjectModel{
             ]  , [
                 "name" => "username",
                 "type" => "VARCHAR( 50 )",
-                "more" => "NOT NULL",
+                "more" => "",
             ] , [
                 "name" => "name",
                 "type" => "VARCHAR( 50 )",
-                "more" => "NOT NULL",
+                "more" => "",
             ] ,[
                 "name" => "password",
                 "type" => "VARCHAR( 50 )",
-                "more" => "NOT NULL",
+                "more" => "",
             ] , [
                 "name" => "email",
                 "type" => "VARCHAR( 50 )",
                 "more" => "NOT NULL"
             ] ,[
                 "name"=> "admin",
+                "type"=> "BIT(1)",
+                "more"=> "DEFAULT 0"
+            ],[
+                "name"=> "google",
                 "type"=> "BIT(1)",
                 "more"=> "DEFAULT 0"
             ]

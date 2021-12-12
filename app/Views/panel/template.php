@@ -7,6 +7,7 @@ if(!isset($_SESSION) || !isset($_SESSION['user'])  || empty($_SESSION['user'])) 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HotHotHot</title>
+        <meta name="google-signin-client_id" content="845297051358-pvjbk8iiksbnubsealcib1avhof0i5oa.apps.googleusercontent.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link id="style" rel="stylesheet" href="/Assets/css/style.css">
@@ -20,5 +21,8 @@ if(!isset($_SESSION) || !isset($_SESSION['user'])  || empty($_SESSION['user'])) 
     <body>
         <?php echo $view['body'] ?>
         <?php include 'standard/footer.php' ?>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
+        <script src="/Assets/js/google-button.js"></script>
+     
     </body>
 </html>

@@ -33,7 +33,7 @@
 <section id="form-box" class="h-box">
     <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
-        <div id="my-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" name="username" type="text">
         <label class="black-label" for="password">Mot de passe</label>
@@ -56,10 +56,10 @@
     </form>
 </section>
 
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
 <script src="/Assets/js/script.js"></script>
 <script src="/Assets/js/google-button.js"></script>
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </body>
 
 </html>

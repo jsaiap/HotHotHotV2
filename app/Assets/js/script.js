@@ -22,6 +22,7 @@ async function logout() {
     const response = await fetch('/logout', {
         method: 'post'
     });
+    onSignOut();
     location.href = window.location.origin + `/home`;
 }
 
