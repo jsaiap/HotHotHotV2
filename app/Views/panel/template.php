@@ -19,6 +19,7 @@ if(!isset($_SESSION) || !isset($_SESSION['user'])  || empty($_SESSION['user'])) 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
+         <?php include 'standard/header.php' ?>
         <?php echo $view['body'] ?>
         <?php include 'standard/footer.php' ?>
         <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 

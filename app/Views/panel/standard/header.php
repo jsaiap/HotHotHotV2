@@ -20,6 +20,20 @@
                 <img id="logout-icon" class="icon" src="/Assets/img/icons8-exit4.png" alt="" /> Déconnexion
             </li>
         </ul>
+
+        <?php
+            if($_SESSION['user']->admin == 1){
+                echo '  <ul>
+                            <li id="users">
+                                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/admin-settings-male.png" alt="" /> Utilisateurs
+                            </li>
+                            <li id="users">
+                                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/admin-settings-male.png" alt="" /> Documentations
+                            </li>
+                        </ul>';
+            }
+        ?>
+       
     </nav>
 
     <img id="close" src="/Assets/img/icons8-fermer.png" alt="">
