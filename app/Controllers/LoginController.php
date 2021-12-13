@@ -40,6 +40,7 @@ final class LoginController
             else{
                 $_SESSION['user']->name =  $_POST['name'];
                 $_SESSION['user']->email =  $_POST['email'];
+                $_SESSION['user']->picture =  $_POST['picture'];
                 $_SESSION['user']->google = 1 ;
                 $_SESSION['user']->save();
                 header('Location: /panel'); 

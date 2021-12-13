@@ -20,12 +20,8 @@
 <main id="home">
     <img id="phone" src="/Assets/img/phone.png" alt="">
     <section class="v-box">
-        <h1 id="name">H</h1>
-        <p id="subtitle">Hot Hot Hot</p>
-    </section>
-    <section class="v-box slogan">
-        <h1 class="slogan-text">Gère tes capteurs,</h1>
-        <p class="slogan-text">t'as capté</p>
+        <img src="/Assets/img/logo-text-v2.png" width="450px" walt="">
+        <img id="app" src="/Assets/img/app.png" width="200px" alt="">
         <button id="connect" onclick="openForm()">Connexion</button>
     </section>
 </main>

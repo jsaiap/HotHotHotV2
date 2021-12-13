@@ -2,7 +2,7 @@
 <main id="capteur-section">
     <section class="main-section">
         <h2>Mon compte</h2>
-        <section>
+        <section id="account">
             <h3>Informations</h3>
             <?php 
 

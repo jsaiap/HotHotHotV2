@@ -11,7 +11,8 @@ function onSignIn(googleUser) {
 
     var name = profile.getName();
     var email = profile.getEmail();
-    var data = "name=" + name + "&email=" + email;
+    var picture = profile.getImageUrl();
+    var data = "name=" + name + "&email=" + email + "&picture=" + picture;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/login/google", true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

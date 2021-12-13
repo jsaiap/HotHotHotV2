@@ -3,7 +3,7 @@ html {
     color: white;
     font-weight: 400;
     margin: 0;
-    background: linear-gradient(-45deg, #e73cd0, #dc1414, #e73cd0, #dc143c);
+    background: linear-gradient(-45deg, #0aa3fc, #f8aa57, #fa9f27, #f30303);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
 }
@@ -65,7 +65,12 @@ div.abcRioButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    align-items: flex-start;
+}
+
+.v-box img {
+    margin-bottom: 20px;
 }
 
 .slogan {
@@ -75,9 +80,9 @@ div.abcRioButton {
 .slogan-text {
     margin: 0;
     font-family: 'Montserrat', sans-serif !important;
-    font-style: italic;
     font-size: 25px;
     font-weight: 600;
+    margin-left: 50px;
 }
 
 .slogan p {
@@ -95,8 +100,15 @@ div.abcRioButton {
     padding: 10px;
     font-style: italic;
     align-self: flex-end;
-    color: #dc143c;
+    color: #f28915;
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
     cursor: pointer;
+}
+
+#app {
+    margin-left: 60px;
 }
 
 #connect:hover {
@@ -109,7 +121,7 @@ div.abcRioButton {
 }
 
 .btn-connect {
-    background: rgba( 208, 2, 27, 0.6);
+    background: #b15f08;
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
@@ -126,7 +138,7 @@ div.abcRioButton {
 
 .btn-connect:hover {
     cursor: pointer;
-    background: rgb(255, 0, 43);
+    background: #f28915;
     transition: 150ms;
 }
 
@@ -238,7 +250,7 @@ main::before {
     width: 100px;
     height: 100px;
     margin-left: 50px;
-    background-color: tomato;
+    background-color: #f28915;
     border-radius: 50%;
     animation: pulse-red 2.5s infinite;
 }
@@ -305,7 +317,7 @@ main::before {
 
 @keyframes pulse-red {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+        box-shadow: 0 0 0 0 #f28915;
     }
     70% {
         box-shadow: 0 0 0 400px rgba(255, 82, 82, 0);

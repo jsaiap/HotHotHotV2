@@ -1,6 +1,6 @@
 html {
     font-family: 'Open Sans', sans-serif;
-    color: #dc143c;
+    color: #f28915;
     font-weight: 400;
     height: 100vh;
     margin: 0;
@@ -25,20 +25,22 @@ header {
     background-color: white;
 }
 
-#name {
+#logo {
+    image-rendering: crisp-edges;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin: 0;
     padding: 0;
+    margin-bottom: 9px;
 }
 
-#name::after {
+#logo::after {
     content: 'H';
     font-weight: 600;
 }
 
-#name::before {
+#logo::before {
     content: 'H';
     font-weight: 800;
 }
@@ -79,6 +81,35 @@ header {
     padding: 10px 25px !important;
 }
 
+#info {
+    margin-left: 250px;
+    padding: 10px 20px;
+    border-bottom: solid 1px rgb(221, 221, 221);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#info h1 {
+    font-size: 13px;
+    font-weight: 100;
+    color: black;
+    margin-right: 10px;
+}
+
+#info img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#info img:hover,
+#info h1:hover {
+    cursor: pointer;
+}
+
 #menu {
     height: 32px;
     width: 32px;
@@ -108,13 +139,26 @@ main h2 {
     color: black;
     font-weight: 400;
     font-size: 15px;
-    background-color: white;
     padding: 10px 20px;
-    border-radius: 5px;
     font-weight: 600;
-    top: -40px;
+    top: -133px;
     position: absolute;
-    left: 10px;
+    left: 0px;
+}
+
+#account {
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    padding: 10px 20px;
+}
+
+#account p {
+    font-size: 13px;
+}
+
+#account h1 {
+    font-size: 13px;
 }
 
 .circle {
@@ -204,8 +248,8 @@ main h2 {
 }
 
 .red {
-    border: solid 2px #dc143c;
-    color: #dc143c !important;
+    border: solid 2px #f28915;
+    color: #f28915 !important;
 }
 
 .graph-box h3 {
@@ -283,11 +327,10 @@ main h2 {
     list-style: none;
     margin: 15px;
     display: flex;
-    justify-content: flex-start;
     font-size: 15px;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px 25px;
     width: 130px;
@@ -323,21 +366,23 @@ main h2 {
 }
 
 #logout {
-    background-color: #dc143c;
+    background-color: #f28915;
     color: white;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    position: absolute;
     align-items: center;
+    bottom: 150px;
     padding: 7px !important;
     height: 20px;
     border: solid 2px !important;
-    border-color: #dc143c !important;
+    border-color: #f28915 !important;
 }
 
 #logout:hover {
     background-color: white;
-    color: #dc143c;
+    color: #f28915;
     transition: 150ms;
 }
 
@@ -389,7 +434,7 @@ footer p {
 
 .live-text {
     position: absolute;
-    color: #dc143c;
+    color: #f28915;
     font-weight: 600;
     top: 5px;
     right: 20px;
@@ -420,15 +465,15 @@ footer p {
     #capteur-section {
         margin-left: 250px;
     }
-    #name,
+    #logo,
     #subtitle {
         z-index: 500;
-        margin-left: 60px;
+        margin-left: 30px;
     }
     header {
         position: fixed;
     }
-    #name {
+    #logo {
         margin-top: 10px;
     }
     main {

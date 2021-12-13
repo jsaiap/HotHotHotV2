@@ -108,8 +108,8 @@ async function display() {
                         label: data[id].sensors[val].type,
                         data: allVal[val],
                         fill: false,
-                        borderColor: '#dc143c',
-                        backgroundColor: '#dc143c',
+                        borderColor: '#f28915',
+                        backgroundColor: '#f28915',
                         tension: 0.4
                     }]
                 },
