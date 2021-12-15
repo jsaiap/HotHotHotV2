@@ -1,10 +1,17 @@
 html {
     font-family: 'Open Sans', sans-serif;
-    color: #dc143c;
     font-weight: 400;
     height: 100vh;
     margin: 0;
     background-color: whitesmoke;
+}
+
+.classic-box {
+    background-color: #2a2e2f;
+}
+
+.classic-box p {
+    color: white;
 }
 
 body {
@@ -26,7 +33,6 @@ header {
 }
 
 #name {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin: 0;
@@ -204,8 +210,8 @@ main h2 {
 }
 
 .red {
-    border: solid 2px #dc143c;
-    color: #dc143c !important;
+    border: solid 2px #f28915;
+    color: #f28915 !important;
 }
 
 .graph-box h3 {
@@ -324,7 +330,7 @@ main h2 {
 }
 
 #logout {
-    background-color: #dc143c;
+    background-color: #f28915;
     color: white;
     border-radius: 5px;
     display: flex;
@@ -333,12 +339,12 @@ main h2 {
     padding: 7px !important;
     height: 20px;
     border: solid 2px !important;
-    border-color: #dc143c !important;
+    border-color: #f28915 !important;
 }
 
 #logout:hover {
     background-color: white;
-    color: #dc143c;
+    color: #f28915;
     transition: 150ms;
 }
 
@@ -390,7 +396,7 @@ footer p {
 
 .live-text {
     position: absolute;
-    color: #dc143c;
+    color: #f28915;
     font-weight: 600;
     top: 5px;
     right: 20px;

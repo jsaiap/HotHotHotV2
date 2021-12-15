@@ -20,12 +20,8 @@
 <main id="home">
     <img id="phone" src="/Assets/img/phone.png" alt="">
     <section class="v-box">
-        <h1 id="name">H</h1>
-        <p id="subtitle">Hot Hot Hot</p>
-    </section>
-    <section class="v-box slogan">
-        <h1 class="slogan-text">Gère tes capteurs,</h1>
-        <p class="slogan-text">t'as capté</p>
+        <img src="/Assets/img/logo-text-v3.png" width="450px" walt="">
+        <img id="app" src="/Assets/img/app.png" width="200px" alt="">
         <button id="connect" onclick="openForm()">Connexion</button>
     </section>
 </main>
@@ -33,7 +29,7 @@
 <section id="form-box" class="h-box">
     <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
-        <div id="my-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" name="username" type="text">
         <label class="black-label" for="password">Mot de passe</label>
@@ -56,10 +52,10 @@
     </form>
 </section>
 
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
 <script src="/Assets/js/script.js"></script>
 <script src="/Assets/js/google-button.js"></script>
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </body>
 
 </html>

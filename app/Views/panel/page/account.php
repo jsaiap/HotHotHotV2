@@ -1,38 +1,27 @@
-<header>
-    <section id="title" class="v-box">
-        <h1 id="name">H</h1>
-        <p id="subtitle">Hot Hot Hot</p>
-    </section>
-
-    <img onclick="openMenu()" id="menu" src="/Assets/img/icons8-menu.png" alt="">
-    <nav id="side-menu">
-        <ul>
-            <li id="account" class="selected">
-                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/admin-settings-male.png" alt="" /> Mon compte
-            </li>
-            <li id="sensors">
-                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/temperature--v1.png" alt="" /> Mes capteurs
-            </li>
-            <li id="settings">
-                <img class="icon" src="https://img.icons8.com/material/24/000000/horizontal-settings-mixer--v1.png" alt="" /> Parametres
-            </li>
-            <li id="logout">
-                <img id="logout-icon" class="icon" src="/Assets/img/icons8-exit4.png" alt="" /> Déconnexion
-            </li>
-        </ul>
-    </nav>
-
-    <img id="close" src="/Assets/img/icons8-fermer.png" alt="">
-</header>
 
 <main id="capteur-section">
     <section class="main-section">
         <h2>Mon compte</h2>
-        <section>
+
+        <section class="classic-box" id="account-info">
+            <?php
+
+                if(!empty($_SESSION['user']->picture)){
+                    echo '<img src="'. $_SESSION['user']->picture.'" alt="">';
+                }else{
+                    echo '<img src="/Assets/img/profil.png" alt="">';
+                }
+           
+            ?>
             <h3>Informations</h3>
             <?php 
-            echo "<p>". $_SESSION['user']->username . "</p>";
-            echo "<p>". $_SESSION['user']->email . "</p>";  
+
+            foreach($_SESSION['user']->fields as $field){
+                if(!empty($_SESSION['user']->{$field['name']}) && $field['name'] != "picture" && $field['name'] != "id" ){
+                    echo '<label for="'. $field['name'] .'">'.$field['name'] .'</label>';
+                    echo '<p>'. $_SESSION['user']->{$field['name']} . '</p>';
+                }
+            } 
             ?>
         </section>
     </section>

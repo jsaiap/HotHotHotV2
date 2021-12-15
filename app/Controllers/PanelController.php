@@ -14,6 +14,8 @@ final class PanelController
     }
     public function parameterAction()
     {
+
+        $_SESSION['settings'] = new Setting();
         View::show('panel/page/parameter');
     }
     public function accountAction()

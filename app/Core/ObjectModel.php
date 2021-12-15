@@ -1,9 +1,9 @@
 <?php 
 abstract class ObjectModel {
 
-    protected $id ;
+    public $id ;
     protected $table ;
-    protected $fields= array();
+    public $fields= array();
 
 
     function __construct($id = null) {
@@ -68,7 +68,8 @@ abstract class ObjectModel {
             $val = $this->{$field['name']};
            
             if (!empty($val)){
-                $value .= '"'. $val . '",';
+                if (is_string($val))$value .= '"'. $val . '",';
+                else $value .=  $val . ','; 
                 $var .=  $field['name'] . ",";
             } 
           
@@ -78,6 +79,7 @@ abstract class ObjectModel {
 
         $db = DataBase::connectdb();
         $sql ="INSERT INTO $this->table (". $var .") VALUES (". $value .") ;";
+        var_dump($sql);
         $db->exec($sql);
         $this->id = $db->lastInsertId();
     }
