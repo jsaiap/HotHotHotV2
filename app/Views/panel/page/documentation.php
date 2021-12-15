@@ -33,7 +33,7 @@
     </section>
     <!-- // TO DO Modifier la documentation icône en haut à droite -->
     <br>
-    <!-- <a href="#"> ✏️ Modifier la documentation</a> -->    <article>
+    <!-- <a href="#"> ✏️ Modifier la documentation</a> --><article>
         <h2>Documentation du MVC HotHotHot</h2>
         <h3>Introduction</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloribus eum fuga hic illo, inventore itaque laboriosam obcaecati optio perferendis quidem, quis saepe sapiente sit temporibus. Doloremque expedita repellat ut!</p>
