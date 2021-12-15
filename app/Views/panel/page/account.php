@@ -19,7 +19,7 @@
             foreach($_SESSION['user']->fields as $field){
                 if(!empty($_SESSION['user']->{$field['name']}) && $field['name'] != "picture" && $field['name'] != "id" ){
                     echo '<label for="'. $field['name'] .'">'.$field['name'] .'</label>';
-                    echo '<input readonly="readonly" value="'. $_SESSION['user']->{$field['name']} . '" >';
+                    echo '<input class="input-change" value="'. $_SESSION['user']->{$field['name']} . '" disabled>';
                 }
             } 
             ?>
@@ -29,3 +29,4 @@
 
 <script src="/Assets/js/script.js"></script>
 <script src="/Assets/js/sensor.js"></script>
+<script src="/Assets/js/edit.js"></script>
