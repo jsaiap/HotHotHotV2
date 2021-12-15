@@ -157,13 +157,27 @@ main h2 {
     color: black;
     padding: 20px 40px;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
 }
 
-#account-info img {
+.user-img {
     width: 80px;
     border-radius: 100px;
     border: solid 1px rgb(212, 212, 212);
 }
+
+.mod-user{
+    width: 25px;
+    position: absolute;
+    z-index: 101;
+    right : 5%;
+    top : 0%;
+    margin: 20px;
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-radius: 0;
+}
+
 
 .hidden {
     visibility: hidden;
