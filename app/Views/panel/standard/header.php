@@ -42,6 +42,7 @@
         <?php
             echo '<h1>'.$_SESSION['user']->name.'</h1>'  ;
             echo '<img id="profil-picture" src="'.$_SESSION['user']->picture .'" alt="">';
+            
         ?>
      
 </section>

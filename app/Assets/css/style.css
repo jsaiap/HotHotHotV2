@@ -146,19 +146,42 @@ main h2 {
     left: 0px;
 }
 
-#account {
+.classic-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 5px;
+    background-color: white;
     font-size: 15px;
     color: black;
-    padding: 10px 20px;
+    padding: 20px 40px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#account p {
-    font-size: 13px;
+#account-info img {
+    width: 80px;
+    border-radius: 100px;
+    border: solid 1px rgb(212, 212, 212);
 }
 
-#account h1 {
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+.classic-box p {
+    font-size: 15px;
+}
+
+.classic-box h3 {
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.classic-box label {
     font-size: 13px;
+    color: rgb(158, 158, 158);
 }
 
 .circle {

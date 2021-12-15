@@ -20,7 +20,7 @@
 <main id="home">
     <img id="phone" src="/Assets/img/phone.png" alt="">
     <section class="v-box">
-        <img src="/Assets/img/logo-text-v2.png" width="450px" walt="">
+        <img src="/Assets/img/logo-text-v3.png" width="450px" walt="">
         <img id="app" src="/Assets/img/app.png" width="200px" alt="">
         <button id="connect" onclick="openForm()">Connexion</button>
     </section>

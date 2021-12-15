@@ -25,6 +25,7 @@ final class RegisterController
                     $_SESSION['user']->password = hash("md5",$_POST['password']);
                     $_SESSION['user']->email = $_POST['email'];
                     $_SESSION['user']->save();
+                    $_SESSION['setting'] = new Setting($_SESSION['user']->id);
                     header('Location: /panel');
                     return ;
                 }

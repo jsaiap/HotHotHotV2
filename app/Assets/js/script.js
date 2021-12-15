@@ -63,7 +63,7 @@ function openMenu() {
 
 function openForm() {
     document.getElementById("form-box").style.display = "flex";
-    document.getElementById("home").style.filter = "blur(6px)";
+    document.getElementById("home").style.filter = "blur(40px)";
 }
 
 async function settings(node) {

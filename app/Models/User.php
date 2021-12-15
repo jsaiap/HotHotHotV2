@@ -10,6 +10,13 @@ final class User extends ObjectModel{
     public $admin;
     public $google;
     
+    function save(){
+        parent::save();
+        $setting = new Setting();
+        $setting->id_user = $this->id;
+        $setting->save();
+    }
+
     function define(){
         $this->table = "users";
         $this->fields = [[
