@@ -41,7 +41,9 @@
 <section id="info">
         <?php
             echo '<h1>'.$_SESSION['user']->name.'</h1>'  ;
-            echo '<img id="profil-picture" src="'.$_SESSION['user']->picture .'" alt="">';
+            if(isset($_SESSION['user']->picture) && !empty($_SESSION['user']->picture)) echo '<img id="profil-picture" src="'.$_SESSION['user']->picture .'" alt="">';
+            else  echo '<img id="profil-picture" src="/Assets/img/profil.png" alt="">';
+            
             
         ?>
      

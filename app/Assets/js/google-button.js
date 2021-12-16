@@ -19,6 +19,8 @@ function onSignIn(googleUser) {
     xhr.send(data);
     xhr.onreadystatechange = (e) => {
         if (xhr.readyState == XMLHttpRequest.DONE) {
+            // Pour debug si le site refresh en boucle
+            // console.log(xhr.responseText);
             location.href = window.location.origin + `/panel`;
         }
     }

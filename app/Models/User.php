@@ -11,10 +11,12 @@ final class User extends ObjectModel{
     public $google;
     
     function save(){
+        if($this->id == null){
+            $setting = new Setting();
+            $setting->id_user = $this->id;
+            $setting->save();
+        }
         parent::save();
-        $setting = new Setting();
-        $setting->id_user = $this->id;
-        $setting->save();
     }
 
     function define(){

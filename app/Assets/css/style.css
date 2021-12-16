@@ -16,6 +16,10 @@ body {
     flex-direction: column;
 }
 
+::placeholder {
+    color: rgba(0, 0, 0, 0.301);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,6 +27,31 @@ header {
     flex-direction: row;
     padding: 20px;
     background-color: white;
+}
+
+#edit-user {
+    border: solid 1px rgb(168, 168, 168);
+    padding: 3px;
+    width: 16px;
+    border-radius: 5px;
+}
+
+#edit-user:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+}
+
+input[type="submit"] {
+    border: none;
+    border: solid 1px rgb(70, 70, 70);
+    padding: 7px 10px;
+    color: rgb(70, 70, 70);
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
 }
 
 #logo {
@@ -155,9 +184,13 @@ main h2 {
     background-color: white;
     font-size: 15px;
     color: black;
-    padding: 20px 40px;
+    padding: 40px;
     font-family: 'Open Sans', sans-serif;
     position: relative;
+}
+
+.classic-box input {
+    margin: 10px;
 }
 
 .user-img {
@@ -166,24 +199,25 @@ main h2 {
     border: solid 1px rgb(212, 212, 212);
 }
 
-.mod-user{
+.mod-user {
     width: 25px;
     position: absolute;
     z-index: 101;
-    right : 5%;
-    top : 0%;
+    right: 5%;
+    top: 0%;
     margin: 20px;
     border-radius: 0;
 }
-
 
 .hidden {
     visibility: hidden;
     position: absolute;
 }
 
-.classic-box p {
+.classic-box p,
+.classic-box input {
     font-size: 15px;
+    text-align: center;
 }
 
 .classic-box h3 {
@@ -193,6 +227,12 @@ main h2 {
 
 .classic-box label {
     font-size: 13px;
+    color: rgb(158, 158, 158);
+}
+
+.classic-label {
+    font-size: 13px !important;
+    margin: 0;
     color: rgb(158, 158, 158);
 }
 

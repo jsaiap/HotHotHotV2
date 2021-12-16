@@ -39,26 +39,31 @@ abstract class ObjectModel {
             $this->create();
         } 
         else{
-            $var = "";
-            foreach($this->fields as $field){
-                $val = $this->{$field['name']};
-    
-                if(!empty($val)) $var .= $field['name']. " =  " . $val . ",";
-            }
-            $var = substr($var, 0, -1);
-    
-    
-            $db = DataBase::connectdb();
-            $sql =" UPDATE $this->table   
-                    SET ". $var ."  WHERE id  = " . $this->id;
-            $db->exec($sql);
-
+            $this->update();
         }
         $obj = $this->getObjectById($this->id);
         foreach($this->fields as $field){
             $this->{$field['name']} = $obj[$field['name']];
         }
 
+    }
+
+    protected function update(){
+        $var = "";
+        foreach($this->fields as $field){
+            $val = $this->{$field['name']};
+            if($field['type'] == "BIT(1)") $var .= $field['name']. " =  " . $val . ",";
+            else if(!empty($val)) $var .= $field['name']. " =  '" . $val . "',";
+        }
+        $var = substr($var, 0, -1);
+
+
+        $db = DataBase::connectdb();
+        $sql =" UPDATE $this->table   
+                SET ". $var ."  WHERE id  = " . $this->id;
+
+        var_dump($sql);
+        $db->exec($sql);
     }
 
     protected function create(){
