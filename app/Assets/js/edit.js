@@ -15,7 +15,7 @@ document.getElementById("edit-user").onclick = function() {
     input.setAttribute("id", "send-info")
 
     //Password
-    document.getElementById("password").remove();
+    if (document.getElementById("password") != null) document.getElementById("password").remove();
     var inputPwd = document.createElement('input');
     inputPwd.setAttribute("id", "pwd");
     inputPwd.setAttribute("name", "pwd");
@@ -36,9 +36,11 @@ document.getElementById("edit-user").onclick = function() {
     var inputExist = document.getElementById('send-info');
 
     if (typeof(inputExist) == 'undefined' || inputExist == null) {
-        form.appendChild(inputPwd);
-        form.appendChild(inputNewPWd);
-        form.appendChild(inputConfirmNewPWd);
+        if (document.getElementById("password") != null) {
+            form.appendChild(inputPwd);
+            form.appendChild(inputNewPWd);
+            form.appendChild(inputConfirmNewPWd);
+        }
         form.appendChild(input);
     }
 
