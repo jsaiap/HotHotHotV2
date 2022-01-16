@@ -1,8 +1,3 @@
-function initSigninV2() {
-
-}
-
-
 function onSignIn(googleUser) {
     let profile = googleUser.getBasicProfile();
     console.log('Name: ' + profile.getName());
@@ -24,7 +19,6 @@ function onSignIn(googleUser) {
             location.href = window.location.origin + `/panel`;
         }
     }
-
 }
 
 function onLoad() {
