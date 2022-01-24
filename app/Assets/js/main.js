@@ -1,9 +1,12 @@
 function main() {
 
+    checkPage();
+    initMenu();
+}
+
+function checkPage() {
     //Recupere la page actuel
     let page = window.location.pathname.split("/").pop();
-    console.log(page)
-
     //Selectionne la page actuel dans le menu
     switch (page) {
         case 'panel':
@@ -15,32 +18,44 @@ function main() {
         case 'parameter':
             document.getElementById("settings").classList.add("selected");
             break;
+        case 'users':
+            document.getElementById("users").classList.add("selected");
+            break;
+        case 'documentation':
+            document.getElementById("documentation").classList.add("selected");
+            break;
         default:
             break;
     }
+}
 
-    document.getElementById("sensors").onclick = function() {
-        location.href = window.location.origin + `/panel`;
+function initMenu() {
 
-    };
+    // Tableau de redirection onclick clé valeur, id element : url 
+    let onClickPages = {
+        "sensors": "/panel",
+        "account": "/panel/account",
+        "profil-picture": "/panel/account",
+        "settings": "/panel/parameter",
+        "users": "/panel/users",
+        "documentation": "/panel/documentation"
+    }
 
-    document.getElementById("account").onclick = function() {
-        location.href = window.location.origin + `/panel/account`;
+    //Pour chaque button rediriger sur la page associer 
+    Object.keys(onClickPages).forEach(key => {
+        let obj = document.getElementById(key);
+        if (obj != null) {
+            obj.onclick = function() {
+                location.href = window.location.origin + onClickPages[key];
 
-    };
+            };
+        }
 
-    document.getElementById("profil-picture").onclick = function() {
-        location.href = window.location.origin + `/panel/account`;
-
-    };
-    document.getElementById("settings").onclick = function() {
-        location.href = window.location.origin + `/panel/parameter`;
-    };
+    });
 
     document.getElementById("logout").onclick = logout;
     document.getElementById("close").onclick = closeMenu;
     document.getElementById("menu").onclick = openMenu;
-
 }
 
 async function logout() {
@@ -67,7 +82,6 @@ function openForm() {
 }
 
 async function settings(node) {
-
     let settings;
     let style = document.getElementById("style");
 

@@ -17,12 +17,18 @@
 </head>
 
 <body>
+<header>
+    <img id="logo-header" src="/Assets/img/logo-svg.svg" alt="">
+    <a id="more-info" href="">En savoir</a>
+</header>
 <main id="home">
     <img id="phone" src="/Assets/img/phone.png" alt="">
     <section class="v-box">
-        <img src="/Assets/img/logo-text-v3.png" width="450px" walt="">
-        <img id="app" src="/Assets/img/app.png" width="200px" alt="">
-        <button id="connect" onclick="openForm()">Connexion</button>
+        <h1 class="home-title">Vos capteur en quelques clics</h1>
+        <div class="row">
+            <button id="connect" onclick="openForm()">Se connecter</button>
+            <button id="register-btn" onclick="openForm()">S'inscrire</button>
+        </div>
     </section>
 </main>
 
@@ -51,9 +57,8 @@
         <button class="btn-connect">S'inscrire</button>
     </form>
 </section>
-
 <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
-<script src="/Assets/js/script.js"></script>
+<script src="/Assets/js/main.js"></script>
 <script src="/Assets/js/google-button.js"></script>
 
 </body>

@@ -14,8 +14,6 @@ final class AccountController
     }
 
     public function editAction(){
-        session_start();
-        var_dump($_POST);
         if($_SESSION['user']->google != 1 && count(array_filter($_POST))==count($_POST)){
             if(!$_SESSION['user']->isObjectExistBy("email",$_POST['email'])){
                 $_SESSION['user']->email = $_POST['email'];

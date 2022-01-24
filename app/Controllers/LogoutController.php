@@ -10,7 +10,6 @@ final class LogoutController
      */
     public function defautAction()
     {
-        session_start();
         session_destroy();
         header("Location: http://".$_SERVER['HTTP_HOST']."/home");
 

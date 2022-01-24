@@ -35,7 +35,6 @@
     </section>
 </main>
 
-
 <script src="/Assets/js/main.js"></script>
 <script src="/Assets/js/sensor.js"></script>
 <script src="/Assets/js/edit.js"></script>

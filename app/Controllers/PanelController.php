@@ -26,4 +26,22 @@ final class PanelController
     {
         View::show('panel/page/sensor-resume');
     }
+
+    public function usersAction(){
+        if($_SESSION['user']->admin == 1){
+            View::show('panel/page/users');
+            return;
+        }
+        header('Location: /panel');
+    }
+
+    public function documentationAction(){
+      
+        if($_SESSION['user']->admin == 1){
+            View::show('panel/page/documentation');
+            return;
+        }
+        header('Location: /panel');
+    }
+
 }

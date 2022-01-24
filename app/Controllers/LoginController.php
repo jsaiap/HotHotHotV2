@@ -11,7 +11,6 @@ final class LoginController
     public function defautAction()
     {
         if(count(array_filter($_POST))==count($_POST)){
-            session_start();
             $_SESSION['user'] = new User();
             if($_SESSION['user']->isObjectExistBy("username", $_POST['username'])){
                 $testUser = $_SESSION['user']->getObjectBy("username", $_POST['username']);
@@ -29,7 +28,6 @@ final class LoginController
 
     public function googleAction(){
         if(count(array_filter($_POST))==count($_POST)){
-            session_start();
             $_SESSION['user'] = new User();
             if($_SESSION['user']->isObjectExistBy("email", $_POST['email'])){
                 $testUser = $_SESSION['user']->getObjectBy("email", $_POST['email']);
