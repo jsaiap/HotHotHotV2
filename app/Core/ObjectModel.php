@@ -62,7 +62,6 @@ abstract class ObjectModel {
         $sql =" UPDATE $this->table   
                 SET ". $var ."  WHERE id  = " . $this->id;
 
-        var_dump($sql);
         $db->exec($sql);
     }
 
@@ -84,19 +83,21 @@ abstract class ObjectModel {
 
         $db = DataBase::connectdb();
         $sql ="INSERT INTO $this->table (". $var .") VALUES (". $value .") ;";
-        var_dump($sql);
         $db->exec($sql);
         $this->id = $db->lastInsertId();
     }
 
-        
+    public function getAll(){
+        $db = DataBase::connectdb();
+        $sql ="SELECT * from $this->table";
+        $objects = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        return $objects;
+    }
 
     public function getObjectBy(string $var, string $val){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
-        var_dump($sql);
         $object = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
-        var_dump($object);
         return $object;
 
     }
@@ -104,7 +105,6 @@ abstract class ObjectModel {
     public function getObjectById(int $id){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where id = $id ";
-        var_dump($sql);
         $object = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
         return $object;
     }
