@@ -25,8 +25,8 @@ final class LoginController
                     $_SESSION['user']->connexion_fail=0;
                     $_SESSION['setting'] = new Setting($_SESSION['user']->id);
                     $_SESSION['user']->save();
-                    //header('Location: /panel'); 
-                    //return;
+                    header('Location: /panel'); 
+                    return;
                 } else {
                     $_SESSION['user'] = new User($testUser['id']);
 
@@ -53,8 +53,8 @@ final class LoginController
                 }
             }
         }
-        //header('Location: /home');
-        //return;
+        header('Location: /home');
+        return;
     }
 
     public function googleAction(){
@@ -64,6 +64,9 @@ final class LoginController
             if($_SESSION['user']->isObjectExistBy("email", $_POST['email'])){
                 $testUser = $_SESSION['user']->getObjectBy("email", $_POST['email']);
                 $_SESSION['user'] = new User($testUser['id']);
+                $_SESSION['user']->connexion_date=date("Y-m-d H:i:s");
+                $_SESSION['user']->connexion_number+=1;
+                $_SESSION['user']->save();
                 $_SESSION['setting'] = new Setting($_SESSION['user']->id);
                 header('Location: /panel'); 
                 return;
