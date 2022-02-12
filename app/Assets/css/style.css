@@ -8,8 +8,10 @@ table {
     border-radius: 5px;
 }
 
-#main {
-    overflow-x: auto;
+table input {
+    border: 1px solid #c0c0c0;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .table-btn {
