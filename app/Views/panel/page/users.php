@@ -17,6 +17,11 @@
                     echo '<tr><form action="/user/update" method="POST">';
                     foreach($_SESSION['user']->fields as $field){
                         if ($field['name'] == 'picture' || $field['name'] == 'password') continue;
+                        if($field['name'] == 'id'){
+                            echo '<td><input type="hidden" name="'.$field['name'].'" value="'.$user[$field['name']].'">'.$user[$field['name']].'</td>';
+                            continue;
+                        }
+
                         $type = strtok($field['type'], '(');
                         $type = ($type == "INT" || $type == "BIT" || $type == "BOOLEAN") ? "number" : "text" ;
                         echo '<td><input type="'. $type .'" name="'.$field['name'].'" value="'.$user[$field['name']].'"></td>';
