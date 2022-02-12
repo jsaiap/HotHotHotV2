@@ -24,7 +24,7 @@
 <main id="home">
     <img id="phone" src="/Assets/img/phone.png" alt="">
     <section class="v-box">
-        <h1 class="home-title">Vos capteur en quelques clics</h1>
+        <h1 class="home-title">Vos capteurs en quelques clics</h1>
         <div class="row">
             <button id="connect" onclick="openForm()">Se connecter</button>
             <button id="register-btn" onclick="openForm()">S'inscrire</button>

@@ -10,5 +10,6 @@
     </section>
 </main>
 
+<script src="/Assets/js/websocket.js"></script>
 <script src="/Assets/js/main.js"></script>
 <script src="/Assets/js/sensor.js"></script>

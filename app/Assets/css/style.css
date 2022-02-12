@@ -168,7 +168,6 @@ input[type="submit"]:hover {
 }
 
 #info {
-    margin-left: 250px;
     padding: 10px 20px;
     border-bottom: solid 1px rgb(221, 221, 221);
     display: flex;
@@ -233,6 +232,7 @@ input[type="submit"]:hover {
 }
 
 .classic-box {
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -586,6 +586,9 @@ footer p {
 }
 
 @media (min-width: 1200px) {
+    #info {
+        margin-left: 250px;
+    }
     .graph-box {
         grid-column: 2;
         grid-row: 2 / span 3;

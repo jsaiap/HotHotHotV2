@@ -176,14 +176,13 @@ header {
 }
 
 .btn-connect {
-    background: white;
-    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    background: #F28915;
     font-family: 'Montserrat', sans-serif;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
+    border: none;
     border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
-    color: rgb(54, 54, 54);
+    color: white;
     font-size: 15px;
     position: absolute;
     bottom: 45px;
@@ -193,8 +192,8 @@ header {
 
 .btn-connect:hover {
     cursor: pointer;
-    background: white;
-    transition: 150ms;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    transition: 100ms;
 }
 
 @keyframes gradient {
@@ -222,11 +221,11 @@ header {
 }
 
 input {
-    background-color: #ffffff2c;
-    border: none;
+    border: 1px solid #f1c697;
     padding: 7px;
     margin: 5px;
-    color: white;
+    width: 60%;
+    color: black;
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
     border-radius: 5px;
@@ -244,8 +243,10 @@ input {
     min-width: 280px;
     width: 300px;
     border-radius: 10px;
-    background-color: rgba(17, 25, 40, 0.25);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    background-color: white;
     border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: black;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
     -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -257,14 +258,16 @@ input {
     display: flex;
     margin: 20px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
-    background: rgba( 255, 255, 255, 0.25);
+    background-color: white;
     justify-content: center;
     align-items: center;
+    color: black;
     flex-direction: column;
     height: 600px;
     padding: 10px;
     min-width: 280px;
     width: 300px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
     border-radius: 10px;
@@ -277,20 +280,17 @@ label {
     justify-self: flex-start;
     border-radius: 3px;
     padding: 3px 7px 3px 7px;
-    background: rgba( 255, 255, 255, 0.25);
+    border: 1px solid black;
+    color: black;
     font-size: 13px;
     align-self: flex-start;
-    margin-left: 34px;
+    margin-left: 15%;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
 ::placeholder {
-    color: rgb(241, 241, 241);
-}
-
-.black-label {
-    background-color: rgba(17, 25, 40, 0.15);
+    color: #f1c697;
 }
 
 .title-form {
@@ -314,6 +314,18 @@ main::before {
     background-color: #f28915;
     border-radius: 50%;
     animation: pulse-red 2.5s infinite;
+}
+
+@media (max-width: 1200px) {
+    #phone {
+        display: none;
+    }
+    main::before {
+        display: none;
+    }
+    #home {
+        padding: 30px;
+    }
 }
 
 @-webkit-keyframes phone {
