@@ -29,7 +29,11 @@ final class PanelController
 
     public function usersAction(){
         if($_SESSION['user']->admin == 1){
-            View::show('panel/page/users');
+            $users = new User();
+            $users = $users->getAll();
+            View::show('panel/page/users', array(
+                "users" => $users,
+            ));
             return;
         }
         header('Location: /panel');

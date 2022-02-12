@@ -1,3 +1,71 @@
+/* Page user list */
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#main {
+    overflow-x: auto;
+}
+
+.table-btn {
+    background-color: #f28915;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #f28915;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.table-btn-outlined {
+    background-color: white;
+    color: #f28915;
+    border: 1px solid #f28915;
+    margin: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.table-btn-outlined:hover {
+    cursor: pointer;
+    background-color: #fff5ea;
+    transition: 100ms;
+}
+
+.table-btn:hover {
+    background-color: #e07808;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+thead {
+    border-radius: 5px;
+}
+
+thead tr {
+    border-radius: 5px 5px 0 0;
+}
+
+th {
+    text-align: start;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid rgb(228, 228, 228);
+}
+
+
 /* Page parametres */
 
 .setting-row {
@@ -209,6 +277,10 @@ input[type="submit"]:hover {
 }
 
 #capteur-section {
+    padding: 20px;
+}
+
+#main {
     padding: 20px;
 }
 
@@ -607,6 +679,9 @@ footer p {
         left: 0;
     }
     #capteur-section {
+        margin-left: 250px;
+    }
+    #main {
         margin-left: 250px;
     }
     #logo,

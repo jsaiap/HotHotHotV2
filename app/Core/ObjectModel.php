@@ -1,10 +1,14 @@
 <?php 
 abstract class ObjectModel {
 
-    public $id ;
-    protected $table ;
-    public $fields= array();
+    /** @var int Id de l'objet */
+    public $id;
 
+    /** @var string Nom de la table associé en BD */
+    protected $table ;
+
+    /** @var array Tableau des champs de l'objet à definir en BD */
+    public $fields= array();
 
     function __construct($id = null) {
         $this->define();
@@ -18,9 +22,29 @@ abstract class ObjectModel {
 
     }
 
+    /**
+     * Methode pour les classes qui enfant pour definir les champs vide 
+     *
+     * @return void
+     */
     abstract protected function define();
 
+    /**
+     * Reconstruit l'objet avec les valeur de la BD
+     *
+     * @return void
+     */
+    public function refresh(){
+        if(isset($this->id) && !empty($this->id)){
+            $this->__construct($this->id);
+        }
+    }
 
+    /**
+     * Construit la table en BD
+     *
+     * @return void
+     */
     protected function createTable(){
         $var = "";
         foreach($this->fields as $field){
@@ -34,6 +58,19 @@ abstract class ObjectModel {
         $db->exec($sql);
     }
 
+    public function delete(){
+        if(isset($this->id) && !empty($this->id)){
+            $db = DataBase::connectdb();
+            $sql ="DELETE from $this->table  WHERE id  = " . $this->id;
+            $db->query($sql);
+        }
+    }
+
+    /**
+     * Crée ou modifier l'objet selon si il existe deja ou non et applique les modification en BD
+     *
+     * @return void
+     */
     public function save(){
         if ($this->id == null){
             $this->create();
@@ -48,6 +85,11 @@ abstract class ObjectModel {
 
     }
 
+    /**
+     * Modifie l'objet en BD
+     *
+     * @return void
+     */
     protected function update(){
         $var = "";
         foreach($this->fields as $field){
@@ -65,6 +107,11 @@ abstract class ObjectModel {
         $db->exec($sql);
     }
 
+     /**
+     * Crée l'objet en BD
+     *
+     * @return void
+     */
     protected function create(){
         $value = "";
         $var = "" ;
@@ -87,21 +134,38 @@ abstract class ObjectModel {
         $this->id = $db->lastInsertId();
     }
 
+    /**
+     * Retourne la liste de tout les elements de la table
+     *
+     * @return array
+     */
     public function getAll(){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table";
-        $objects = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+        $objects = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $objects;
     }
-
+    
+    /**
+     * Retourne un objet selon le champ definit
+     * 
+     * @param string $var Nom du champ
+     * @param string $val Valeur du champ
+     * @return array
+     */
     public function getObjectBy(string $var, string $val){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
         $object = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
         return $object;
-
     }
 
+    /**
+     * Retourne un objet selon son id
+     *
+     * @param integer $id Id de l'objet
+     * @return void
+     */
     public function getObjectById(int $id){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where id = $id ";
@@ -109,6 +173,13 @@ abstract class ObjectModel {
         return $object;
     }
 
+    /**
+     * Retourne si l'objet existe en BD ou non selon un champ choisit
+     *
+     * @param string $var Nom du champ
+     * @param string $val Valeur du champ
+     * @return boolean
+     */
     public function isObjectExistBy(string $var, string $val){
         $db = DataBase::connectdb();
         $sql ="SELECT * from $this->table where $var = '$val' ";
