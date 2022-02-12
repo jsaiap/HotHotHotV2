@@ -8,12 +8,14 @@ final class PanelController
      *
      * @return void
      */
-    public function defautAction()
+    public static function defautAction()
     {
         View::show('panel/page/sensor');
     }
     public function parameterAction()
     {
+
+        $_SESSION['settings'] = new Setting();
         View::show('panel/page/parameter');
     }
     public function accountAction()
@@ -24,4 +26,26 @@ final class PanelController
     {
         View::show('panel/page/sensor-resume');
     }
+
+    public function usersAction(){
+        if($_SESSION['user']->admin == 1){
+            $users = new User();
+            $users = $users->getAll();
+            View::show('panel/page/users', array(
+                "users" => $users,
+            ));
+            return;
+        }
+        header('Location: /panel');
+    }
+
+    public function documentationAction(){
+      
+        if($_SESSION['user']->admin == 1){
+            View::show('panel/page/documentation');
+            return;
+        }
+        header('Location: /panel');
+    }
+
 }

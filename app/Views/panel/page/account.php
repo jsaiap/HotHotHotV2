@@ -1,35 +1,41 @@
-<header>
-    <section id="title" class="v-box">
-        <h1 id="name">H</h1>
-        <p id="subtitle">Hot Hot Hot</p>
-    </section>
-
-    <img onclick="openMenu()" id="menu" src="/Assets/img/icons8-menu.png" alt="">
-    <nav id="side-menu">
-        <ul>
-            <li id="account" class="selected">
-                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/admin-settings-male.png" alt="" /> Mon compte
-            </li>
-            <li id="sensors">
-                <img class="icon" src="https://img.icons8.com/material-rounded/24/000000/temperature--v1.png" alt="" /> Mes capteurs
-            </li>
-            <li id="settings">
-                <img class="icon" src="https://img.icons8.com/material/24/000000/horizontal-settings-mixer--v1.png" alt="" /> Parametres
-            </li>
-            <li id="logout">
-                <img id="logout-icon" class="icon" src="/Assets/img/icons8-exit4.png" alt="" /> Déconnexion
-            </li>
-        </ul>
-    </nav>
-
-    <img id="close" src="/Assets/img/icons8-fermer.png" alt="">
-</header>
 
 <main id="capteur-section">
     <section class="main-section">
-        <h2>Mon compte</h2>
+        <h2 class="page-name">Mon compte</h2>
+        <form class="classic-box" id="account-info" method="POST" action="/account/edit">
+            <span id="edit-user" class="material-icons">
+            edit
+            </span>
+            <?php
+                if(!empty($_SESSION['user']->picture)){
+                    echo '<img class="user-img" src="'. $_SESSION['user']->picture.'" alt="">';
+                }else{
+                    echo '<img class="user-img" src="/Assets/img/profil.png" alt="">';
+                }
+            
+            ?>
+            <h3>Informations</h3>
+            <?php 
+                if ($_SESSION['user']->google != 1){
+                    echo '<label for="username">Identifiant</label>';
+                    echo '<input id="username" name="username" class="input-change" value="'. $_SESSION['user']->username . '" disabled>';
+                }
+
+                echo '<label for="name">Nom</label>';
+                echo '<input id="name" name="name" class="input-change" value="'. $_SESSION['user']->name . '" disabled>';
+                        
+                if ($_SESSION['user']->google != 1){
+                    echo '<label for="email">E-mail</label>';
+                    echo '<input id="email" name="email" class="input-change" value="'. $_SESSION['user']->email . '" disabled>';
+                    echo '<label>Mot de passe</label>';
+                    echo '<input id="password" class="input-change" value="*********" disabled>';
+                }
+            ?>
+        </form>
     </section>
 </main>
 
-<script src="/Assets/js/script.js"></script>
+
+<script src="/Assets/js/main.js"></script>
 <script src="/Assets/js/sensor.js"></script>
+<script src="/Assets/js/edit.js"></script>

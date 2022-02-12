@@ -23,7 +23,7 @@ async function display() {
     let allHour = [];
 
 
-    document.getElementById("panel-capteur").innerHTML += `<h2>${data[id].name}</h2>`
+    document.getElementById("panel-capteur").innerHTML += `<h2 class="page-name">${data[id].name}</h2>`
 
     for (val in data[id].sensors) {
 
@@ -108,8 +108,8 @@ async function display() {
                         label: data[id].sensors[val].type,
                         data: allVal[val],
                         fill: false,
-                        borderColor: '#dc143c',
-                        backgroundColor: '#dc143c',
+                        borderColor: '#f28915',
+                        backgroundColor: '#f28915',
                         tension: 0.4
                     }]
                 },
