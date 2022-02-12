@@ -58,6 +58,7 @@ abstract class ObjectModel {
         $var = substr($var, 0, -1);
 
 
+
         $db = DataBase::connectdb();
         $sql =" UPDATE $this->table   
                 SET ". $var ."  WHERE id  = " . $this->id;
