@@ -1,40 +1,22 @@
 
-<main id="capteur-section">
+<main id="main">
     <section class="main-section">
-        <h2 class="page-name">Mon compte</h2>
-        <form class="classic-box" id="account-info" method="POST" action="/account/edit">
-        <span id="edit-user" class="material-icons">
-        edit
-        </span>
-        <?php
-            if(!empty($_SESSION['user']->picture)){
-                echo '<img class="user-img" src="'. $_SESSION['user']->picture.'" alt="">';
-            }else{
-                echo '<img class="user-img" src="/Assets/img/profil.png" alt="">';
-            }
-           
-        ?>
-        <h3>Informations</h3>
-        <?php 
-            if ($_SESSION['user']->google != 1){
-                echo '<label for="username">Identifiant</label>';
-                echo '<input id="username" name="username" class="input-change" value="'. $_SESSION['user']->username . '" disabled>';
-            }
-
-            echo '<label for="name">Nom</label>';
-            echo '<input id="name" name="name" class="input-change" value="'. $_SESSION['user']->name . '" disabled>';
-                     
-            if ($_SESSION['user']->google != 1){
-                echo '<label for="email">E-mail</label>';
-                echo '<input id="email" name="email" class="input-change" value="'. $_SESSION['user']->email . '" disabled>';
-                echo '<label>Mot de passe</label>';
-                echo '<input id="password" class="input-change" value="*********" disabled>';
-            }
+        <h2 class="page-name">Documentation</h2>
+        <table class="w-70">         
+            <?php
+                echo '<thead><tr>';
+                echo '<th class="th-title d-flex-center">Titre<a class="text-dec-none d-flex-center" href="/panel/newdoc"><span id="add-doc" class="material-icons">add_circle</span></a></th>';
+                echo '</tr></thead>';
+                echo '<tbody>';
+                foreach($view['documentations'] as $documentation){
+                    echo '<tr>';
+                    echo '<td><a class="doc-a" href="/panel/documentation?id='.$documentation['id'].'">'.$documentation['title'].'</td>';
+                    echo '</tr>';
+                }
+                echo '</tbody>';
             ?>
-        </form>
+        </table>
     </section>
 </main>
 
 <script src="/Assets/js/main.js"></script>
-<script src="/Assets/js/sensor.js"></script>
-<script src="/Assets/js/edit.js"></script>

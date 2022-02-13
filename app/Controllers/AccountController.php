@@ -27,6 +27,7 @@ final class AccountController
         }
         $_SESSION['user']->name = $_POST['name'];
         $_SESSION['user']->save();
+        $_SESSION['user']->refresh();
         header('Location: /panel/account');
     }
 }
