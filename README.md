@@ -1,3 +1,4 @@
+![hotgit](https://user-images.githubusercontent.com/62051465/153775408-8911c055-5e8e-4653-a1bc-64a47f364c08.png)
 
 # HotHotHot
 HotHotHot est une application dont le rôle est d’être une interface d’information et 
@@ -10,7 +11,7 @@ Elle affiche ces données, leur historique si nécessaire et propose des suggest
 #### C'est dans ce sujet que s'incrit notre interprétation d'HotHotHot
 
 ### Notre groupe :
-#### Les mousquetaires
+#### Les Croustiboys
 - Mario Ferrali 
 - Sylvain Coupard
 - Titouan Reynaud
@@ -31,8 +32,9 @@ Elle affiche ces données, leur historique si nécessaire et propose des suggest
  - Page de connexion responsive
  - Interface d'administration
  - Blocage de compte
- 
+
  #### Parmi les fonctionnalités que nous avons abandonné vous retrouverez : 
  - Le PWA après de nombreuses tentatives nous avons décidé d'économiser du temps de travail pour permettre de pousser d'avantage d'autres aspects de l'application.
+ - Le HTTPS Fonctionne partiellement si vous rencontrez des problèmes pour vous connecter ou déconnecter veuillez passer en HTTP
  - L'utilisation du Websocket, nous avons mis en place un système pour stocker en base de données les valeurs récupérées par un script exécuté avec un Cronjob. Suite à de nombreux echecs de connexion avec le websocket nous avons finalement gardé des données en dur pour éviter de grosses erreurs et pour garder un affichage fonctionnel.
  - Nous avons également développé la récupération de mot de passe pour les utilisateurs mais nous avons eu des difficultés avec la réception des e-mails à cet effet.
