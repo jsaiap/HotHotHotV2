@@ -19,6 +19,7 @@ final class RegisterController
                     return ;
                 }
                 elseif($_POST['password'] == $_POST['password-confirm']){
+                    date_default_timezone_set('Europe/Paris');
                     $_SESSION['user']->username = $_POST['username'] ;
                     $_SESSION['user']->name = $_POST['name'] ;
                     $_SESSION['user']->password = password_hash($_POST['password'], PASSWORD_DEFAULT);

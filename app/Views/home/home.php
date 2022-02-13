@@ -56,6 +56,14 @@
         <input id="conf-password-i" name="password-confirm" placeholder="Confimer votre mot de passe" type="password">
         <button class="btn-connect">S'inscrire</button>
     </form>
+
+    <!-- 
+    <form id="forgotPassword" method="POST" action="forgotPassword">
+        <h2 class="title-form">Mot de passe oublié</h2>
+        <label class="black-label" for="mail-m">E-mail</label>
+        <input id="mail-m" name="email" placeholder="exemple@hothothot.fr" type="email">
+        <button class="btn-connect">Envoyer l'email</button>
+    </form> -->
 </section>
 <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
 <script src="/Assets/js/main.js"></script>

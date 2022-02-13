@@ -8,10 +8,13 @@ final class User extends ObjectModel{
     public $email;
     public $picture;
     public $admin;
-    public $creation_date;
-    public $connexion_date;
+    public $last_connexion;
+    public $now_connexion;
     public $connexion_number;
+    public $connexion_fail;
     public $locked;
+    public $token;
+    public $token_date;
     public $google;
     
     function save(){
@@ -39,7 +42,7 @@ final class User extends ObjectModel{
                 "more" => "",
             ] ,[
                 "name" => "password",
-                "type" => "VARCHAR( 50 )",
+                "type" => "VARCHAR( 60 )",
                 "more" => "",
             ] , [
                 "name" => "email",
@@ -64,11 +67,11 @@ final class User extends ObjectModel{
             ],[
                 "name"=> "connexion_number",
                 "type"=> "INT(5)",
-                "more"=> "DEFAULT 0"
+                "more"=> "DEFAULT 1"
             ],[
                 "name"=> "connexion_fail",
-                "type"=> "INT(2)",
-                "more"=> "DEFAULT 0"
+                "type"=> "INT(5)",
+                "more"=> "DEFAULT 1"
             ],[
                 "name"=> "locked",
                 "type"=> "BOOLEAN",
