@@ -8,6 +8,10 @@ final class User extends ObjectModel{
     public $email;
     public $picture;
     public $admin;
+    public $creation_date;
+    public $connexion_date;
+    public $connexion_number;
+    public $locked;
     public $google;
     
     function save(){
@@ -50,14 +54,30 @@ final class User extends ObjectModel{
                 "type"=> "BIT(1)",
                 "more"=> "DEFAULT 0"
             ],[
+                "name"=> "creation_date",
+                "type"=> "TIMESTAMP",
+                "more"=> "DEFAULT CURRENT_TIMESTAMP"
+            ],[
+                "name"=> "connexion_date",
+                "type"=> "TIMESTAMP",
+                "more"=> "DEFAULT CURRENT_TIMESTAMP"
+            ],[
+                "name"=> "connexion_number",
+                "type"=> "INT(5)",
+                "more"=> "DEFAULT 0"
+            ],[
+                "name"=> "connexion_fail",
+                "type"=> "INT(2)",
+                "more"=> "DEFAULT 0"
+            ],[
+                "name"=> "locked",
+                "type"=> "BOOLEAN",
+                "more"=> "DEFAULT 0"
+            ],[
                 "name"=> "google",
                 "type"=> "BIT(1)",
                 "more"=> "DEFAULT 0"
             ]
         ];
     }
-
-
-    
-
 }
