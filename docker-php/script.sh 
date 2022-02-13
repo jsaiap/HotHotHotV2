@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true
+do
+    php ../app/Assets/scrip/sensorScript.php
+    sleep 1800
+done
