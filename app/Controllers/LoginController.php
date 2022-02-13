@@ -10,6 +10,7 @@ final class LoginController
      */
     public function defautAction()
     {
+        $error = "";
         if(count(array_filter($_POST))==count($_POST)){
             date_default_timezone_set('Europe/Paris');
             $_SESSION['user'] = new User();
@@ -28,6 +29,8 @@ final class LoginController
                     return;
                 } else {
                     $_SESSION['user'] = new User($testUser['id']);
+                    $error = "Identifiant ou mot de passe incorrect";
+                    // Regarde si l'utilisateur n'a pas son compte bloqué
                     if($testUser['locked'] == 0) {
                         switch($testUser['connexion_fail']) {
                             case 1:
@@ -39,6 +42,7 @@ final class LoginController
                             case 3:
                                 $_SESSION['user']->connexion_fail=4;
                                 $_SESSION['user']->locked=1;
+                                $error  = "Utilisateur bloqué";
                                 break;
                         }
                         $_SESSION['user']->save();
@@ -46,7 +50,9 @@ final class LoginController
                 }
             }
         }
-        header('Location: /home');
+        View::show('home/connect', array(
+            "error" => $error
+        ));
         return;
     }
     

@@ -10,12 +10,16 @@ final class PanelController
      */
     public static function defautAction()
     {
-        View::show('panel/page/sensor');
+        $sensor = new Sensor();
+        // Creation des capteurs de base si il n'existe pas dans la table (Obligation de faire ça car le websocket ne fonctionne pas tout le temp)
+        $sensors = $sensor->getAll();
+
+        View::show('panel/page/sensor', array(
+            "sensors" => $sensors
+        ));
     }
     public function parameterAction()
-    {
-
-        $_SESSION['settings'] = new Setting();
+    {   
         View::show('panel/page/parameter');
     }
     public function accountAction()

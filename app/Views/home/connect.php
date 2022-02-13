@@ -8,7 +8,7 @@
     <title>HotHotHot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link id="style" rel="stylesheet" href="/Assets/css/home.css">
+    <link id="style" rel="stylesheet" href="/Assets/css/connect.css">
     <link rel="shortcut icon" href="/Assets/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,7 @@
 <section id="form-box" class="h-box">
     <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
+        <p id="error-msg"> <?php echo $view['error'] ?> </p>
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" name="username" required="required" type="text">
@@ -57,16 +58,8 @@
         <span id='message'></span>
         <button class="btn-connect">S'inscrire</button>
     </form>
-
-    <!-- 
-    <form id="forgotPassword" method="POST" action="forgotPassword">
-        <h2 class="title-form">Mot de passe oublié</h2>
-        <label class="black-label" for="mail-m">E-mail</label>
-        <input id="mail-m" name="email" placeholder="exemple@hothothot.fr" type="email">
-        <button class="btn-connect">Envoyer l'email</button>
-    </form> -->
 </section>
-<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 <script src="/Assets/js/main.js"></script>
 <script src="/Assets/js/google-button.js"></script>
 
