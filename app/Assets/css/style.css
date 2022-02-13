@@ -1,4 +1,54 @@
+/* Page create doc */
+
+#add-doc {
+    color: #f28915;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.title-input {
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+}
+
+.form-doc {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    font-size: 14px;
+    color: black;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form-doc textarea,
+.form-doc input {
+    border: 1px solid #c0c0c0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.form-doc label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.end {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+
 /* Page user list */
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    font-size: 14px;
+    display: flex;
+}
 
 table {
     background-color: white;
