@@ -13,9 +13,7 @@ final class PanelController
         View::show('panel/page/sensor');
     }
     public function parameterAction()
-    {
-
-        $_SESSION['settings'] = new Setting();
+    {   
         View::show('panel/page/parameter');
     }
     public function accountAction()
