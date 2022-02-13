@@ -29,6 +29,15 @@ body {
     background-color: #171a1b!important;
 }
 
+p,
+.description {
+    color: white!important;
+}
+
+.live-text {
+    color: rgb(255, 178, 52)!important;
+}
+
 .alert {
     box-shadow: none!important;
 }
