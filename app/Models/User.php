@@ -54,11 +54,11 @@ final class User extends ObjectModel{
                 "type"=> "BIT(1)",
                 "more"=> "DEFAULT 0"
             ],[
-                "name"=> "creation_date",
+                "name"=> "last_connexion",
                 "type"=> "TIMESTAMP",
                 "more"=> "DEFAULT CURRENT_TIMESTAMP"
             ],[
-                "name"=> "connexion_date",
+                "name"=> "now_connexion",
                 "type"=> "TIMESTAMP",
                 "more"=> "DEFAULT CURRENT_TIMESTAMP"
             ],[
@@ -73,6 +73,14 @@ final class User extends ObjectModel{
                 "name"=> "locked",
                 "type"=> "BOOLEAN",
                 "more"=> "DEFAULT 0"
+            ],[
+                "name"=> "token",
+                "type"=> "VARCHAR( 13 )",
+                "more"=> ""
+            ],[
+                "name"=> "token_date",
+                "type"=> "TIMESTAMP",
+                "more"=> "DEFAULT CURRENT_TIMESTAMP"
             ],[
                 "name"=> "google",
                 "type"=> "BIT(1)",

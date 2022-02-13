@@ -21,8 +21,8 @@ final class AccountController
             if(!$_SESSION['user']->isObjectExistBy("username",$_POST['username'])){
                 $_SESSION['user']->username = $_POST['username'];
             }
-            if ($_SESSION['user']->password == hash("md5", $_POST['pwd']) && $_POST['new-pwd'] == $_POST['conf-new-pwd']){
-                $_SESSION['user']->password = hash("md5",$_POST['new-pwd']);
+            if (password_verify($_POST['pwd'], $_SESSION['user']->password) && $_POST['new-pwd'] == $_POST['conf-new-pwd']){
+                $_SESSION['user']->password = password_hash($_POST['new-pwd'], PASSWORD_DEFAULT);
             }
         }
         $_SESSION['user']->name = $_POST['name'];
