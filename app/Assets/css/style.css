@@ -87,6 +87,16 @@
     width: 100%;
 }
 
+.tox-tinymce {
+    width: 100%;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .form-doc input {
     border: 1px solid #c0c0c0;
     padding: 5px;
@@ -445,6 +455,11 @@ input[type="submit"]:hover {
 
 .classic-box input {
     margin: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 3px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .user-img {
@@ -470,7 +485,7 @@ input[type="submit"]:hover {
 
 .classic-box p,
 .classic-box input {
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
 }
 

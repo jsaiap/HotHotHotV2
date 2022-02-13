@@ -36,7 +36,7 @@ document.getElementById("edit-user").onclick = function() {
     var inputExist = document.getElementById('send-info');
 
     if (typeof(inputExist) == 'undefined' || inputExist == null) {
-        if (document.getElementById("password") != null) {
+        if (document.getElementById("label-password") != null) {
             form.appendChild(inputPwd);
             form.appendChild(inputNewPWd);
             form.appendChild(inputConfirmNewPWd);

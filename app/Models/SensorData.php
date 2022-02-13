@@ -18,7 +18,7 @@ final class SensorData extends ObjectModel{
                 "more" => "",
             ] , [
                 "name" => "temperature",
-                "type" => "VARCHAR( 50 )",
+                "type" => "INT(11)",
                 "more" => "",
             ] ,[
                 "name"=> "creation_date",
