@@ -4,12 +4,30 @@
     color: #f28915;
     font-size: 17px;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .title-input {
     font-size: 14px;
     border: none;
     font-weight: 600;
+}
+
+.text-dec-none {
+    text-decoration: none;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.th-title {
+    justify-content: space-between;
+}
+
+.w-70 {
+    width: 70%;
 }
 
 .form-doc {
@@ -19,18 +37,58 @@
     font-size: 14px;
     color: black;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
-.form-doc textarea,
+.form-doc textarea {
+    border: 1px solid #c0c0c0;
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+}
+
+.textarea-responsive {
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+}
+
+.input-responsive {
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    outline: none;
+    resize: none;
+}
+
+.doc-a {
+    display: block;
+    color: #be6200;
+    width: 100%;
+}
+
 .form-doc input {
     border: 1px solid #c0c0c0;
     padding: 5px;
     border-radius: 3px;
+    float: left;
+    width: 98%;
+    outline: none;
+    resize: none;
 }
 
 .form-doc label {
+    align-self: flex-start;
     margin-top: 10px;
     margin-bottom: 10px;
 }
