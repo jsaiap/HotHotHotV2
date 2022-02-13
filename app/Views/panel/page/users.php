@@ -7,7 +7,7 @@
             <?php
                 echo '<thead><tr>';
                 foreach($_SESSION['user']->fields as $field){
-                    if ($field['name'] == 'picture' || $field['name'] == 'password') continue;
+                    if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google') continue;
                     echo '<th>'. ucfirst($field['name']).'</th>';
                 }
                 echo '<th></th>';
@@ -16,7 +16,7 @@
                 foreach($view['users'] as $user){
                     echo '<tr><form action="/user/update" method="POST">';
                     foreach($_SESSION['user']->fields as $field){
-                        if ($field['name'] == 'picture' || $field['name'] == 'password') continue;
+                        if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google') continue;
                         if($field['name'] == 'id'){
                             echo '<td><input type="hidden" name="'.$field['name'].'" value="'.$user[$field['name']].'">'.$user[$field['name']].'</td>';
                             continue;
