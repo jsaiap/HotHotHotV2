@@ -27,7 +27,7 @@
                 if ($_SESSION['user']->google != 1){
                     echo '<label for="email">E-mail</label>';
                     echo '<input id="email" name="email" class="input-change" value="'. $_SESSION['user']->email . '" disabled>';
-                    echo '<label>Mot de passe</label>';
+                    echo '<label id="label-password">Mot de passe</label>';
                     echo '<input id="password" class="input-change" value="*********" disabled>';
                 }
             ?>
