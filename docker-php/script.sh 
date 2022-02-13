@@ -3,5 +3,5 @@
 while true
 do
     php ../app/Assets/scrip/sensorScript.php
-    sleep 10
+    sleep 1800
 done
