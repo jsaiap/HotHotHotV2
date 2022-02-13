@@ -57,6 +57,24 @@ final class AutoLoad
 
     }
 
+    // Peut etre a voir plus tard
+    // public static function loadModulesClassesView ($className)
+    // {
+    //     $file = "";
+
+    //     $dotDir = array('.', '..');
+
+    //     foreach(array_diff(scandir(Constants::modulesDirectory(), 1), $dotDir) as $module){
+    //         foreach(array_diff(scandir(Constants::modulesViewsDirectory("$module"), 1), $dotDir) as $viewName){
+    //             if ("$viewName" == "$className.php"){
+    //                 $file = Constants::modulesViewsDirectory("$module") . "$className.php";
+    //             }
+    //         }
+    //     }
+
+    //     return static::_load($file);
+    // }
+
     public static function loadModulesClassesController ($className)
     {
         $file = "";
@@ -90,6 +108,7 @@ spl_autoload_register('AutoLoad::loadClassesModel');
 spl_autoload_register('AutoLoad::loadClassesView');
 spl_autoload_register('AutoLoad::loadClassesController');
 spl_autoload_register('AutoLoad::loadModulesClassesModel');
+// spl_autoload_register('AutoLoad::loadModulesClassesView');
 spl_autoload_register('AutoLoad::loadModulesClassesController');
 
 
