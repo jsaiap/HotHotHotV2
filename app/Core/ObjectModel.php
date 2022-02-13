@@ -131,6 +131,7 @@ abstract class ObjectModel {
 
         $db = DataBase::connectdb();
         $sql ="INSERT INTO $this->table (". $var .") VALUES (". $value .") ;";
+        var_dump($sql);
         $db->exec($sql);
         $this->id = $db->lastInsertId();
     }
