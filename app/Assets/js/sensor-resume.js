@@ -23,7 +23,7 @@ async function display() {
     let allHour = [];
 
 
-    document.getElementById("panel-capteur").innerHTML += `<h2>${data[id].name}</h2>`
+    document.getElementById("panel-capteur").innerHTML += `<h2 class="page-name">${data[id].name}</h2>`
 
     for (val in data[id].sensors) {
 

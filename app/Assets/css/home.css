@@ -3,18 +3,35 @@ html {
     color: white;
     font-weight: 400;
     margin: 0;
-    background: linear-gradient(-45deg, #00fff2, #00b7ff, #aa02f8, #fc5032, #fd7247);
-    background-size: 400% 400%;
+    /*background: linear-gradient(-45deg, #00fff2, #00b7ff, #aa02f8, #fc5032, #fd7247);*/
+    /*background-size: 400% 400%;*/
     animation: gradient 10s ease infinite;
 }
 
 body {
     margin: 0;
+    height: 100vh;
+    background-image: url('../img/ellipse.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top 350px right;
 }
 
 div.abcRioButton {
     border-radius: 5px;
     box-shadow: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#logo-header {
+    width: 180px;
 }
 
 #home {
@@ -23,7 +40,7 @@ div.abcRioButton {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 88vh;
     /*filter: blur(4px)*/
 }
 
@@ -73,6 +90,23 @@ div.abcRioButton {
     margin-bottom: 20px;
 }
 
+.home-title {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 2rem;
+}
+
+#more-info {
+    font-family: 'Work Sans';
+    color: black;
+    text-decoration: none;
+}
+
+#more-info::after {
+    content: ' +';
+    color: #f28915;
+}
+
 .slogan {
     margin: 50px;
 }
@@ -92,41 +126,63 @@ div.abcRioButton {
 }
 
 #connect {
-    background-color: white;
-    border: 0;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Work Sans';
+    font-weight: 300;
+    color: white;
+    background-color: #f28915;
+    border: solid 2px #f28915;
+    padding: 5px 10px;
+    font-size: 20px;
     border-radius: 5px;
-    font-size: 21px;
-    padding: 10px;
-    align-self: flex-end;
-    color: black;
-    position: absolute;
-    bottom: 70px;
-    right: 30px;
+    text-decoration: none;
+}
+
+#connect:hover {
     cursor: pointer;
+    background-color: #ff4800;
+    border-color: #ff4800;
+    transition: 150ms;
+}
+
+#register-btn:hover {
+    cursor: pointer;
+    background-color: #f28915;
+    color: white;
+    transition: 150ms;
+}
+
+#register-btn {
+    font-family: 'Work Sans';
+    font-weight: 300;
+    color: #f28915;
+    border: solid 2px #f28915;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
 }
 
 #app {
     margin-left: 60px;
 }
 
-#connect:hover {
-    color: white;
-    transition: 150ms;
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: rgba(0, 0, 0, 0.6) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgbrgba(0, 0, 0, 0.2)5px 15px, rgba(0, 0, 0, 0.1) -20px 20px, rgba(0, 0, 0, 0.05) -25px 25px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
-}
-
 .btn-connect {
-    background: white;
-    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    background: #F28915;
     font-family: 'Montserrat', sans-serif;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
+    border: none;
     border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
-    color: rgb(54, 54, 54);
+    color: white;
     font-size: 15px;
     position: absolute;
     bottom: 45px;
@@ -136,8 +192,8 @@ div.abcRioButton {
 
 .btn-connect:hover {
     cursor: pointer;
-    background: white;
-    transition: 150ms;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    transition: 100ms;
 }
 
 @keyframes gradient {
@@ -165,11 +221,11 @@ div.abcRioButton {
 }
 
 input {
-    background-color: #ffffff2c;
-    border: none;
+    border: 1px solid #f1c697;
     padding: 7px;
     margin: 5px;
-    color: white;
+    width: 60%;
+    color: black;
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
     border-radius: 5px;
@@ -187,8 +243,10 @@ input {
     min-width: 280px;
     width: 300px;
     border-radius: 10px;
-    background-color: rgba(17, 25, 40, 0.25);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    background-color: white;
     border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: black;
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
     -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -200,14 +258,16 @@ input {
     display: flex;
     margin: 20px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
-    background: rgba( 255, 255, 255, 0.25);
+    background-color: white;
     justify-content: center;
     align-items: center;
+    color: black;
     flex-direction: column;
     height: 600px;
     padding: 10px;
     min-width: 280px;
     width: 300px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
     backdrop-filter: blur( 4px);
     -webkit-backdrop-filter: blur( 4px);
     border-radius: 10px;
@@ -220,20 +280,17 @@ label {
     justify-self: flex-start;
     border-radius: 3px;
     padding: 3px 7px 3px 7px;
-    background: rgba( 255, 255, 255, 0.25);
+    border: 1px solid black;
+    color: black;
     font-size: 13px;
     align-self: flex-start;
-    margin-left: 34px;
+    margin-left: 15%;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
 ::placeholder {
-    color: rgb(241, 241, 241);
-}
-
-.black-label {
-    background-color: rgba(17, 25, 40, 0.15);
+    color: #f1c697;
 }
 
 .title-form {
@@ -251,12 +308,24 @@ label {
 
 main::before {
     content: "";
-    width: 100px;
-    height: 100px;
-    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
     background-color: #f28915;
     border-radius: 50%;
     animation: pulse-red 2.5s infinite;
+}
+
+@media (max-width: 1200px) {
+    #phone {
+        display: none;
+    }
+    main::before {
+        display: none;
+    }
+    #home {
+        padding: 30px;
+    }
 }
 
 @-webkit-keyframes phone {
@@ -321,7 +390,7 @@ main::before {
 
 @keyframes pulse-red {
     0% {
-        box-shadow: 0 0 0 0 #00000070;
+        box-shadow: 0 0 0 0 #F28915;
     }
     70% {
         box-shadow: 0 0 0 400px rgba(255, 82, 82, 0);

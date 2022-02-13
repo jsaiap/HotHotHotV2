@@ -1,3 +1,238 @@
+/* Page create doc */
+
+#add-doc {
+    color: #f28915;
+    font-size: 17px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.title-input {
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+}
+
+.text-dec-none {
+    text-decoration: none;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.th-title {
+    justify-content: space-between;
+    width: inherit;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.form-doc {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    font-size: 14px;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-doc textarea {
+    border: 1px solid #c0c0c0;
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+}
+
+.textarea-responsive {
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+}
+
+.input-responsive {
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    outline: none;
+    resize: none;
+}
+
+.doc-a {
+    display: block;
+    color: #be6200;
+    width: 100%;
+}
+
+.form-doc input {
+    border: 1px solid #c0c0c0;
+    padding: 5px;
+    border-radius: 3px;
+    float: left;
+    width: 98%;
+    outline: none;
+    resize: none;
+}
+
+.form-doc label {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.end {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+
+/* Page user list */
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    font-size: 14px;
+    display: flex;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+table input {
+    border: 1px solid #c0c0c0;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.table-btn {
+    background-color: #f28915;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #f28915;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.table-btn-outlined {
+    background-color: white;
+    color: #f28915;
+    border: 1px solid #f28915;
+    margin: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.table-btn-outlined:hover {
+    cursor: pointer;
+    background-color: #fff5ea;
+    transition: 100ms;
+}
+
+.table-btn:hover {
+    background-color: #e07808;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+thead {
+    border-radius: 5px;
+}
+
+thead tr {
+    border-radius: 5px 5px 0 0;
+}
+
+th {
+    text-align: start;
+    padding: 15px;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid rgb(228, 228, 228);
+}
+
+
+/* Page parametres */
+
+.setting-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.setting-row h2 {
+    font-size: 0.9rem;
+}
+
+.setting-row span {
+    font-size: 0.7rem;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.setting-row input[type='checkbox']:hover {
+    cursor: pointer;
+}
+
+.classic-box-header {
+    top: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f28915;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+
+/* Divers */
+
 html {
     font-family: 'Open Sans', sans-serif;
     color: #f28915;
@@ -34,10 +269,17 @@ header {
     padding: 3px;
     width: 16px;
     border-radius: 5px;
+    font-size: 1.2rem;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #edit-user:hover {
     cursor: pointer;
+    border: solid 1px rgb(243, 243, 243);
     background-color: rgb(243, 243, 243);
 }
 
@@ -52,6 +294,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: rgb(221, 221, 221);
     cursor: pointer;
+}
+
+#welcome-text {
+    width: 100%;
+    color: black;
+    padding: 0 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #logo {
@@ -111,7 +360,6 @@ input[type="submit"]:hover {
 }
 
 #info {
-    margin-left: 250px;
     padding: 10px 20px;
     border-bottom: solid 1px rgb(221, 221, 221);
     display: flex;
@@ -156,6 +404,10 @@ input[type="submit"]:hover {
     padding: 20px;
 }
 
+#main {
+    padding: 20px;
+}
+
 #panel-capteur {
     display: flex;
     position: relative;
@@ -164,7 +416,7 @@ input[type="submit"]:hover {
     justify-content: center;
 }
 
-main h2 {
+.page-name {
     color: black;
     font-weight: 400;
     font-size: 15px;
@@ -176,6 +428,7 @@ main h2 {
 }
 
 .classic-box {
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +437,6 @@ main h2 {
     background-color: white;
     font-size: 15px;
     color: black;
-    padding: 40px;
     font-family: 'Open Sans', sans-serif;
     position: relative;
 }
@@ -402,7 +654,7 @@ main h2 {
     list-style: none;
     margin: 15px;
     display: flex;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 5px;
     display: flex;
     justify-content: flex-start;
@@ -411,6 +663,12 @@ main h2 {
     width: 130px;
     height: 20px;
     border-color: rgb(247, 247, 247);
+}
+
+#side-menu li span {
+    font-size: 1.3rem;
+    color: black;
+    margin-right: 10px;
 }
 
 #side-menu li:hover {
@@ -440,7 +698,7 @@ main h2 {
     cursor: pointer;
 }
 
-#logout {
+#side-menu #logout {
     background-color: #f28915;
     color: white;
     border-radius: 5px;
@@ -455,15 +713,19 @@ main h2 {
     border-color: #f28915 !important;
 }
 
-#logout:hover {
+#side-menu #logout span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#side-menu #logout:hover {
     background-color: white;
     color: #f28915;
     transition: 150ms;
 }
 
-#logout:hover #logout-icon {
-    transition: 150ms;
-    content: url('../img/icons8-exit3.png');
+#side-menu #logout:hover span {
+    color: #f28915;
 }
 
 footer {
@@ -520,6 +782,9 @@ footer p {
 }
 
 @media (min-width: 1200px) {
+    #info {
+        margin-left: 250px;
+    }
     .graph-box {
         grid-column: 2;
         grid-row: 2 / span 3;
@@ -538,6 +803,9 @@ footer p {
         left: 0;
     }
     #capteur-section {
+        margin-left: 250px;
+    }
+    #main {
         margin-left: 250px;
     }
     #logo,

@@ -51,7 +51,7 @@ final class User extends ObjectModel{
                 "more" => ""
             ] ,[
                 "name"=> "admin",
-                "type"=> "BOOLEAN",
+                "type"=> "BIT(1)",
                 "more"=> "DEFAULT 0"
             ],[
                 "name"=> "creation_date",

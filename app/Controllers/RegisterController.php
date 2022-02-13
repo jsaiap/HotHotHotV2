@@ -11,7 +11,6 @@ final class RegisterController
     public function defautAction()
     {
         if(count(array_filter($_POST))==count($_POST)){
-                session_start();
                 $_SESSION['user'] = new User();
                 if($_SESSION['user']->isObjectExistBy("username", $_POST['username']) || $_SESSION['user']->isObjectExistBy("email", $_POST['email'])){
                     session_destroy();
