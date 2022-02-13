@@ -32,7 +32,11 @@ Elle affiche ces données, leur historique si nécessaire et propose des suggest
  - Page de connexion responsive
  - Interface d'administration
  - Blocage de compte
-
+### Informations importantes
+[Notre site hébergé](http://ec2-15-237-149-228.eu-west-3.compute.amazonaws.com/)
+Compte administateur :
+- Identifiant : admin
+- Mot de passe : admin
  #### Parmi les fonctionnalités que nous avons abandonné vous retrouverez : 
  - Le PWA après de nombreuses tentatives nous avons décidé d'économiser du temps de travail pour permettre de pousser d'avantage d'autres aspects de l'application.
  - Le HTTPS Fonctionne partiellement si vous rencontrez des problèmes pour vous connecter ou déconnecter veuillez passer en HTTP
