@@ -401,7 +401,13 @@ main::before {
 }
 
 #error-msg {
-    font-weight: 900;
+    font-size: 14px;
     color: red;
-    font-size: 12px;
+    border: solid 1px red;
+    font-size: 10px;
+    margin-top: px;
+    border-radius: 3px;
+    font-weight: 600;
+    background-color: #fcf1f1;
+    padding: 4px;
 }
