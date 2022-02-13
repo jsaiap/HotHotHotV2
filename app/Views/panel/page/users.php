@@ -9,10 +9,10 @@
                 foreach($_SESSION['user']->fields as $field){
                     if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google') continue;
                     if($field['name'] == 'id') {
-                        echo '<th>'. ucfirst($field['name']).'</th>';
+                        echo '<th>'. str_replace('_', ' ', ucfirst($field['name'])).'</th>';
                         continue;
                     } 
-                    echo '<th class="w-20">'. ucfirst($field['name']).'</th>';
+                    echo '<th class="w-10">'. str_replace('_', ' ', ucfirst($field['name'])).'</th>';
                 }
                 echo '<th class="w-30"></th>';
                 echo '</tr></thead>';
