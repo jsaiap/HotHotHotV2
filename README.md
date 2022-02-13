@@ -34,6 +34,7 @@ Elle affiche ces données, leur historique si nécessaire et propose des suggest
  - Blocage de compte
 ### Informations importantes
 [Notre site hébergé](http://ec2-15-237-149-228.eu-west-3.compute.amazonaws.com/)
+
 Compte administateur :
 - Identifiant : admin
 - Mot de passe : admin
