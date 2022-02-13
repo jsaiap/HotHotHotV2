@@ -10,6 +10,7 @@ final class LoginController
      */
     public function defautAction()
     {
+        $error = "";
         if(count(array_filter($_POST))==count($_POST)){
             $_SESSION['user'] = new User();
             if($_SESSION['user']->isObjectExistBy("username", $_POST['username'])){
@@ -28,7 +29,7 @@ final class LoginController
                     return;
                 } else {
                     $_SESSION['user'] = new User($testUser['id']);
-
+                    $error = "Identifiant ou mot de passe incorrect";
                     // Regarde si l'utilisateur n'a pas son compte bloqué
                     if($testUser['locked'] == 0) {
                         switch($testUser['connexion_fail']) {
@@ -45,6 +46,7 @@ final class LoginController
                                 // Compte bloqué
                                 $_SESSION['user']->connexion_fail=3;
                                 $_SESSION['user']->locked=1;
+                                $error  = "Utilisateur bloqué";
                                 break;
                         }
                         $_SESSION['user']->save();
@@ -52,7 +54,9 @@ final class LoginController
                 }
             }
         }
-        header('Location: /home');
+        View::show('home/connect', array(
+            "error" => $error
+        ));
         return;
     }
 

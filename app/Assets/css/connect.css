@@ -1,0 +1,407 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    /*background: linear-gradient(-45deg, #00fff2, #00b7ff, #aa02f8, #fc5032, #fd7247);*/
+    /*background-size: 400% 400%;*/
+    animation: gradient 10s ease infinite;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('../img/ellipse.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top 350px right;
+}
+
+div.abcRioButton {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#logo-header {
+    width: 180px;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 88vh;
+    filter: blur(40px);
+}
+
+#name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+#name::after {
+    content: 'H';
+    font-weight: 600;
+}
+
+#name::before {
+    content: 'H';
+    font-weight: 800;
+}
+
+#subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+    font-size: 31px;
+}
+
+.h-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: flex-start;
+}
+
+.v-box img {
+    margin-bottom: 20px;
+}
+
+.home-title {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 2rem;
+}
+
+#more-info {
+    font-family: 'Work Sans';
+    color: black;
+    text-decoration: none;
+}
+
+#more-info::after {
+    content: ' +';
+    color: #f28915;
+}
+
+.slogan {
+    margin: 50px;
+}
+
+.slogan-text {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.slogan p {
+    align-self: baseline;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+#connect {
+    font-family: 'Work Sans';
+    font-weight: 300;
+    color: white;
+    background-color: #f28915;
+    border: solid 2px #f28915;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#connect:hover {
+    cursor: pointer;
+    background-color: #ff4800;
+    border-color: #ff4800;
+    transition: 150ms;
+}
+
+#register-btn:hover {
+    cursor: pointer;
+    background-color: #f28915;
+    color: white;
+    transition: 150ms;
+}
+
+#register-btn {
+    font-family: 'Work Sans';
+    font-weight: 300;
+    color: #f28915;
+    border: solid 2px #f28915;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
+}
+
+#app {
+    margin-left: 60px;
+}
+
+.btn-connect {
+    background: #F28915;
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 45px;
+    padding: 5px 10px 5px 10px;
+    font-weight: 600;
+}
+
+.btn-connect:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    transition: 100ms;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#form-box {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #f1c697;
+    padding: 7px;
+    margin: 5px;
+    width: 60%;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+#login {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 380px;
+    min-width: 280px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    background-color: white;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: black;
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#register {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    margin: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    flex-direction: column;
+    height: 600px;
+    padding: 10px;
+    min-width: 280px;
+    width: 300px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 17%);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+label {
+    font-family: "Montserrat", sans-serif;
+    justify-self: flex-start;
+    border-radius: 3px;
+    padding: 3px 7px 3px 7px;
+    border: 1px solid black;
+    color: black;
+    font-size: 13px;
+    align-self: flex-start;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+::placeholder {
+    color: #f1c697;
+}
+
+.title-form {
+    justify-self: flex-start;
+    position: absolute;
+    top: 30px;
+}
+
+#phone {
+    margin-top: 50px;
+    width: 300px;
+    margin-left: -175px;
+    animation: phone 5s ease infinite;
+}
+
+main::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    background-color: #f28915;
+    border-radius: 50%;
+    animation: pulse-red 2.5s infinite;
+}
+
+@media (max-width: 1200px) {
+    #phone {
+        display: none;
+    }
+    main::before {
+        display: none;
+    }
+    #home {
+        padding: 30px;
+    }
+}
+
+@-webkit-keyframes phone {
+    0% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@keyframes phone {
+    0% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 #F28915;
+    }
+    70% {
+        box-shadow: 0 0 0 400px rgba(255, 82, 82, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+}
+
+#error-msg {
+    font-weight: 900;
+    color: red;
+    font-size: 12px;
+}

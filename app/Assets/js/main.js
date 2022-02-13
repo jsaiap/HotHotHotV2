@@ -98,6 +98,16 @@ async function settings(node) {
     }
 }
 
+var check = function() {
+    if (!document.getElementById('password-i').value.replace(/\s+/, '').length) {
+        document.getElementById('message').innerHTML = '❌';
+    } else if (document.getElementById('password-i').value ==
+        document.getElementById('conf-password-i').value) {
+        document.getElementById('message').innerHTML = '✅';
+    } else {
+        document.getElementById('message').innerHTML = '❌';
+    }
+}
 
 main();
 
