@@ -17,8 +17,10 @@ final class User extends ObjectModel{
     function save(){
         parent::save();
         $setting = new Setting();
-        $setting->id_user = $this->id;
-        $setting->save();
+        if(!$setting->isObjectExistBy('id_user', $this->id)){
+            $setting->id_user = $this->id;
+            $setting->save();
+        }
     }
 
     function define(){
