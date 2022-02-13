@@ -35,7 +35,11 @@
 <section id="form-box" class="h-box">
     <form id="login" method="POST" action="login">
         <h2 class="title-form">Connexion</h2>
-        <p id="error-msg"> <?php echo $view['error'] ?> </p>
+        <?php 
+            if(isset($view['error']) && !empty($view['error'])){
+               echo '<p id="error-msg">'. $view['error'] . '</p>';
+            }
+        ?>
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <label class="black-label" for="username">Identifiant</label>
         <input id="username" name="username" required="required" type="text">

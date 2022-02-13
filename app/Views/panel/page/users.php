@@ -7,7 +7,7 @@
             <?php
                 echo '<thead><tr>';
                 foreach($_SESSION['user']->fields as $field){
-                    if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google') continue;
+                    if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google' || $field['name'] == 'token' || $field['name'] == 'token_date') continue;
                     if($field['name'] == 'id') {
                         echo '<th>'. str_replace('_', ' ', ucfirst($field['name'])).'</th>';
                         continue;
@@ -20,7 +20,7 @@
                 foreach($view['users'] as $user){
                     echo '<tr><form action="/user/update" method="POST">';
                     foreach($_SESSION['user']->fields as $field){
-                        if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google') continue;
+                        if ($field['name'] == 'picture' || $field['name'] == 'password' || $field['name'] == 'google' || $field['name'] == 'token' || $field['name'] == 'token_date') continue;
                         if($field['name'] == 'id'){
                             echo '<td><input  type="hidden" name="'.$field['name'].'" value="'.$user[$field['name']].'">'.$user[$field['name']].'</td>';
                             continue;
