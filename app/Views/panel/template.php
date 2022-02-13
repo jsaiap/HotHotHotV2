@@ -17,7 +17,6 @@ if(!isset($_SESSION) || !isset($_SESSION['user'])  || empty($_SESSION['user'])) 
         if($_SESSION['setting']->darkmode == 1) echo '<link id="style" rel="stylesheet" href="/Assets/css/darkmode.css">';
         ?>
         <link rel="shortcut icon" href="/Assets/img/favicon.png" type="image/x-icon">
-        
         <link rel="stylesheet" href="/Assets/css/info.css">
         <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;600;800&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
